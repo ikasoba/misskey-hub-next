@@ -1,5 +1,5 @@
 ---
-description: "Questa guida spiega come installare e configurare Misskey"
+description: 'Questa guida spiega come installare e configurare Misskey'
 ---
 
 # Guida alla costruzione di Misskey
@@ -21,9 +21,11 @@ Occorre installare il seguente software
 Debian/Ubuntuをお使いであれば、`build-essential`パッケージをインストールしておくと良いです。
 
 corepackが有効化されていること
+
 ```sh
 sudo corepack enable
 ```
+
 :::
 
 ## Creazione utente

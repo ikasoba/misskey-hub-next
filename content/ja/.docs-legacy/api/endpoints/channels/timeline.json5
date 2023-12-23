@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -33,9 +31,7 @@
 				type: 'integer',
 			},
 		},
-		required: [
-			'channelId',
-		],
+		required: ['channelId'],
 	},
 	res: {
 		type: 'array',

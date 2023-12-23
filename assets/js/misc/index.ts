@@ -9,18 +9,18 @@ import { parseURL } from 'ufo';
  * @returns パスの先にあるもの
  */
 export function resolveObjPath(o: object, s: string): any {
-    s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
-    s = s.replace(/^\./, '');           // strip a leading dot
-    var a = s.split('.');
-    for (var i = 0, n = a.length; i < n; ++i) {
-        var k = a[i];
-        if (k in o) {
-            o = o[k];
-        } else {
-            return;
-        }
-    }
-    return o;
+	s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
+	s = s.replace(/^\./, ''); // strip a leading dot
+	var a = s.split('.');
+	for (var i = 0, n = a.length; i < n; ++i) {
+		var k = a[i];
+		if (k in o) {
+			o = o[k];
+		} else {
+			return;
+		}
+	}
+	return o;
 }
 
 /**
@@ -29,26 +29,34 @@ export function resolveObjPath(o: object, s: string): any {
  * @param base ローカルの基準となるドメイン
  */
 export function isLocalPath(link: string, base?: string): boolean {
-    let baseUrl;
+	let baseUrl;
 
-    if (base) {
-        baseUrl = base;
-    } else {
-        const runtimeConfig = useRuntimeConfig();
-        baseUrl = runtimeConfig.public.baseUrl;
-    }
+	if (base) {
+		baseUrl = base;
+	} else {
+		const runtimeConfig = useRuntimeConfig();
+		baseUrl = runtimeConfig.public.baseUrl;
+	}
 
-    const rootDomain = parseURL(base);
-    const url = parseURL(link);
+	const rootDomain = parseURL(base);
+	const url = parseURL(link);
 
-    return (!url.host || rootDomain.host === url.host);
+	return !url.host || rootDomain.host === url.host;
 }
 
 export function sanitizeInternalPath(path: string): string {
-    const runtimeConfig = useRuntimeConfig();
-    return path
-        .replace(/^(\/((?!ja)[a-z]{2}))?\/blog\/(.+)/g, '/ja/blog/$3')
-        .replace(new RegExp(`^(\/(${(runtimeConfig.public.locales as LocaleObject[]).map((l) => l.code).join('|')})\/?){2,}(.*)$`, 'g'), '$1$2');
+	const runtimeConfig = useRuntimeConfig();
+	return path
+		.replace(/^(\/((?!ja)[a-z]{2}))?\/blog\/(.+)/g, '/ja/blog/$3')
+		.replace(
+			new RegExp(
+				`^(\/(${(runtimeConfig.public.locales as LocaleObject[])
+					.map((l) => l.code)
+					.join('|')})\/?){2,}(.*)$`,
+				'g',
+			),
+			'$1$2',
+		);
 }
 
 /**
@@ -57,7 +65,10 @@ export function sanitizeInternalPath(path: string): string {
  * @param condition 深掘りを停止する条件
  * @returns 深掘りしたナビゲーションObject
  */
-export const findDeepObject = (obj: NavItem, condition: (v: NavItem) => boolean): NavItem | null => {
+export const findDeepObject = (
+	obj: NavItem,
+	condition: (v: NavItem) => boolean,
+): NavItem | null => {
 	if (condition(obj)) {
 		return obj;
 	}
@@ -78,7 +89,7 @@ export const findDeepObject = (obj: NavItem, condition: (v: NavItem) => boolean)
  * Clipboardに値をコピー(TODO: 文字列以外も対応)
  */
 export function copyText(val: string) {
-    if (!process.client) return;
+	if (!process.client) return;
 
 	// 空div 生成
 	const tmp = document.createElement('div');

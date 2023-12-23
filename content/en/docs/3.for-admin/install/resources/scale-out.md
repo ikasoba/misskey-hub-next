@@ -12,14 +12,12 @@ dbReplications: true
 
 # Configure all slaves to replicate the DB to
 dbSlaves:
-  -
-    host: foo
+  - host: foo
     port: 5432
     db: misskey
     user: xxxxx
     pass: xxxxx
-  -
-    host: bar
+  - host: bar
     port: 5432
     db: misskey
     user: xxxxx

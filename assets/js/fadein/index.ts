@@ -20,5 +20,5 @@ export const vFadeIn = {
 		});
 
 		observer.observe(src);
-	}
+	},
 };

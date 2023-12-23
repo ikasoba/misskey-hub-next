@@ -1,5 +1,5 @@
 ---
-description: "Se ti capita un problema, prima di tutto leggi questa pagina"
+description: 'Se ti capita un problema, prima di tutto leggi questa pagina'
 ---
 
 # Risoluzione autonoma dei problemi

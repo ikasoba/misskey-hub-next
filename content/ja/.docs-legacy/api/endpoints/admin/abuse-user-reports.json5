@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -29,20 +27,12 @@
 			},
 			reporterOrigin: {
 				type: 'string',
-				enum: [
-					'combined',
-					'local',
-					'remote',
-				],
+				enum: ['combined', 'local', 'remote'],
 				default: 'combined',
 			},
 			targetUserOrigin: {
 				type: 'string',
-				enum: [
-					'combined',
-					'local',
-					'remote',
-				],
+				enum: ['combined', 'local', 'remote'],
 				default: 'combined',
 			},
 			forwarded: {

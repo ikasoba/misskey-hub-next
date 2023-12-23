@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'gallery',
-	],
+	tags: ['gallery'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -13,9 +11,7 @@
 				format: 'misskey:id',
 			},
 		},
-		required: [
-			'postId',
-		],
+		required: ['postId'],
 	},
 	res: {
 		type: 'object',

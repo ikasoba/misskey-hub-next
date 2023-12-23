@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザーの統計情報を取得します。',
 	description: 'ユーザーの統計情報を取得します。',
-	tags: [
-		'users',
-	],
+	tags: ['users'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ユーザーのid。',
 			},
 		},
-		required: [
-			'userId',
-		],
+		required: ['userId'],
 	},
 	res: {
 		type: 'object',

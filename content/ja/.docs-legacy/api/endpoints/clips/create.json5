@@ -1,9 +1,7 @@
 {
 	summary: 'クリップを作成します。',
 	description: 'クリップを作成します。',
-	tags: [
-		'clips',
-	],
+	tags: ['clips'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -17,7 +15,7 @@
 			isPublic: {
 				type: 'boolean',
 				default: false,
-				description: 'trueにすると、他のユーザーやログインしていないクライアントにクリップを公開します。'
+				description: 'trueにすると、他のユーザーやログインしていないクライアントにクリップを公開します。',
 			},
 			description: {
 				type: 'string',
@@ -27,9 +25,7 @@
 				description: 'クリップの説明。',
 			},
 		},
-		required: [
-			'name',
-		],
+		required: ['name'],
 	},
 	res: {
 		type: 'object',

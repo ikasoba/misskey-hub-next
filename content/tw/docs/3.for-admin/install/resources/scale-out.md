@@ -13,14 +13,12 @@ dbReplications: true
 
 # 此處設定唯讀副本清單（您可以設定任意數量）
 dbSlaves:
-  -
-    host: foo
+  - host: foo
     port: 5432
     db: misskey
     user: xxxxx
     pass: xxxxx
-  -
-    host: bar
+  - host: bar
     port: 5432
     db: misskey
     user: xxxxx

@@ -1,11 +1,7 @@
 <template>
-    <NuxtLink
-        :to="realHref"
-        :href="undefined"
-        :target="realTarget"
-    >
-        <slot></slot>
-    </NuxtLink>
+	<NuxtLink :to="realHref" :href="undefined" :target="realTarget">
+		<slot></slot>
+	</NuxtLink>
 </template>
 
 <script setup lang="ts">
@@ -20,34 +16,43 @@ import type { RouteLocationRaw } from '#vue-router';
  */
 
 const rawProps = defineProps<{
-    to?: RouteLocationRaw | string;
-    href?: RouteLocationRaw | string;
-    target?: unknown;
+	to?: RouteLocationRaw | string;
+	href?: RouteLocationRaw | string;
+	target?: unknown;
 }>();
 
 const localePath = useGLocalePath();
 
 const needsToOpenExternally = ref(false);
 const realHref = computed(() => {
-    const rhf = rawProps.to ?? rawProps.href;
+	const rhf = rawProps.to ?? rawProps.href;
 
-    if (rhf && typeof rhf === 'string') {
-        if (rhf.startsWith('x-mi-web://')) {
-            needsToOpenExternally.value = true;
-            return localePath(withQuery('/mi-web/', { path: cleanDoubleSlashes(rhf.replace('x-mi-web:/', '')) }));
-        }
+	if (rhf && typeof rhf === 'string') {
+		if (rhf.startsWith('x-mi-web://')) {
+			needsToOpenExternally.value = true;
+			return localePath(
+				withQuery('/mi-web/', {
+					path: cleanDoubleSlashes(rhf.replace('x-mi-web:/', '')),
+				}),
+			);
+		}
 
-        if (isLocalPath(rhf)) {
-            return withTrailingSlash(cleanDoubleSlashes(sanitizeInternalPath(rhf)), true);
-        }
+		if (isLocalPath(rhf)) {
+			return withTrailingSlash(
+				cleanDoubleSlashes(sanitizeInternalPath(rhf)),
+				true,
+			);
+		}
 
-        return rhf;
-    }
+		return rhf;
+	}
 
-    // TODO: ルート定義をオブジェクトで渡された時のバリデーション
+	// TODO: ルート定義をオブジェクトで渡された時のバリデーション
 
-    return rhf;
+	return rhf;
 });
 
-const realTarget = computed(() => (needsToOpenExternally.value ? '_blank' : (rawProps.target ?? null)));
+const realTarget = computed(() =>
+	needsToOpenExternally.value ? '_blank' : rawProps.target ?? null,
+);
 </script>

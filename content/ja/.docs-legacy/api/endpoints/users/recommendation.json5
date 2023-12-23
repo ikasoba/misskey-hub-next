@@ -1,9 +1,7 @@
 {
 	summary: 'おすすめのユーザーを取得します。',
 	description: 'ログイン中のユーザーに対して、フォローをおすすめできるユーザーを取得します。',
-	tags: [
-		'users',
-	],
+	tags: ['users'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -18,7 +16,7 @@
 			offset: {
 				type: 'integer',
 				default: 0,
-				description: '検索結果の先頭offset個をスキップします。'
+				description: '検索結果の先頭offset個をスキップします。',
 			},
 		},
 		required: [],

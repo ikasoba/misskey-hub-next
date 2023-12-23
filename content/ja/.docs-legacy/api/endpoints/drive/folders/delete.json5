@@ -1,9 +1,7 @@
 {
 	summary: 'フォルダーを削除します。',
 	description: 'ログイン中のユーザのドライブにあるフォルダーを削除します。中身が空のフォルダーだけが削除できます。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'フォルダーのid。',
 			},
 		},
-		required: [
-			'folderId',
-		],
+		required: ['folderId'],
 	},
 	res: {},
 	errors: {

@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'meta',
-	],
+	tags: ['meta'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -129,13 +127,7 @@
 							format: 'url',
 						},
 					},
-					required: [
-						'id',
-						'aliases',
-						'category',
-						'host',
-						'url',
-					],
+					required: ['id', 'aliases', 'category', 'host', 'url'],
 				},
 			},
 			ads: {
@@ -165,11 +157,7 @@
 							format: 'url',
 						},
 					},
-					required: [
-						'place',
-						'url',
-						'imageUrl',
-					],
+					required: ['place', 'url', 'imageUrl'],
 				},
 			},
 			enableEmail: {

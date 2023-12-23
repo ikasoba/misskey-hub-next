@@ -108,7 +108,7 @@ WantedBy=multi-user.target
 ```
 
 :::warning
-如果你想在 CentOS 上讓  Misskey 使用的連接埠低於 1024，需要將其更改為 `ExecStart=/usr/bin/sudo /usr/bin/npm start`。
+如果你想在 CentOS 上讓 Misskey 使用的連接埠低於 1024，需要將其更改為 `ExecStart=/usr/bin/sudo /usr/bin/npm start`。
 :::
 
 重新載入 systemd 並啟用 misskey 服務。

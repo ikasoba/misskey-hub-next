@@ -1,9 +1,7 @@
 {
 	summary: 'アンケート付きのおすすめのノートの一覧を取得します。',
 	description: 'アンケート付きのおすすめのノートの一覧を取得します。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: true,
 	req: {
 		type: 'object',

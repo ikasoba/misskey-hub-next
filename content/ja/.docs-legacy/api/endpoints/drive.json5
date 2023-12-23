@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -26,10 +24,7 @@
 				nullable: false,
 			},
 		},
-		required: [
-			'capacity',
-			'usage',
-		],
+		required: ['capacity', 'usage'],
 	},
 	errors: {},
 }

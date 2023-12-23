@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'lists',
-	],
+	tags: ['lists'],
 	requireCredential: true,
 	req: {
 		type: 'object',

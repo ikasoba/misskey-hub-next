@@ -27,15 +27,15 @@ Questa tabella riassume la visibilità delle Note, in base alle loro caratterist
 | Fonte              |            |      | Timeline |         |          |
 | ------------------ | ---------- | ---- | -------- | ------- | -------- |
 | Profilo            | Visibilità | Home | Locale   | Sociale | Federata |
-| Locale (che segui) | Pubblico   | ✔    | ✔        | ✔       | ✔        |
-|                    | Home       | ✔    |          | ✔       |          |
-|                    | Follower   | ✔    |          | ✔       |          |
-| Remoto (che segui) | Pubblico   | ✔    |          | ✔       | ✔        |
-|                    | Home       | ✔    |          | ✔       |          |
-|                    | Follower   | ✔    |          | ✔       |          |
-| Locale (non segui) | Pubblico   |      | ✔        | ✔       | ✔        |
+| Locale (che segui) | Pubblico   | ✔   | ✔       | ✔      | ✔       |
+|                    | Home       | ✔   |          | ✔      |          |
+|                    | Follower   | ✔   |          | ✔      |          |
+| Remoto (che segui) | Pubblico   | ✔   |          | ✔      | ✔       |
+|                    | Home       | ✔   |          | ✔      |          |
+|                    | Follower   | ✔   |          | ✔      |          |
+| Locale (non segui) | Pubblico   |      | ✔       | ✔      | ✔       |
 |                    | Home       |      |          |         |          |
 |                    | Follower   |      |          |         |          |
-| Remoto (non segui) | Pubblico   |      |          |         | ✔        |
+| Remoto (non segui) | Pubblico   |      |          |         | ✔       |
 |                    | Home       |      |          |         |          |
 |                    | Follower   |      |          |         |          |

@@ -1,6 +1,6 @@
 # Status Online (Aktywności)
 
-**Status Online**  użytkownika jest to indykator użycia Misskey przez użytkownika.
+**Status Online** użytkownika jest to indykator użycia Misskey przez użytkownika.
 Status online jest wyświetlany jako indykator w rogu ikony użytkownika na jego stronie użytkownika i w innych miejscach.
 
 <table>

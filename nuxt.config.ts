@@ -49,7 +49,7 @@ function getRouteRules(): NuxtConfig['routeRules'] {
 		localeCodes.forEach((code) => {
 			_localeBasedRules[`/${code}${route}`] = localeBasedRules[route];
 		});
-	})
+	});
 
 	return {
 		...staticRules,
@@ -63,40 +63,35 @@ export default defineNuxtConfig({
 			baseUrl,
 			repositoryUrl,
 			locales,
-		}
+		},
 	},
 	css: [
-		"github-markdown-css/github-markdown.css",
-		"@/assets/css/nprogress.css",
-		"@/assets/css/tailwind.css",
-		"@/assets/css/mfm.scss",
-		"@/assets/css/bootstrap-forms.scss",
+		'github-markdown-css/github-markdown.css',
+		'@/assets/css/nprogress.css',
+		'@/assets/css/tailwind.css',
+		'@/assets/css/mfm.scss',
+		'@/assets/css/bootstrap-forms.scss',
 	],
-	modules: [
-		'@nuxt/content',
-		'@nuxtjs/i18n',
-		'@nuxtjs/color-mode',
-	],
+	modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxtjs/color-mode'],
 	app: {
 		head: {
 			link: [
 				{ rel: 'stylesheet', href: '/fonts/fonts.css' },
 				{ rel: 'apple-touch-icon', href: '/img/icons/apple-touch-icon.png' },
-				{ rel: 'shortcut icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
+				{
+					rel: 'shortcut icon',
+					type: 'image/vnd.microsoft.icon',
+					href: '/favicon.ico',
+				},
 				{ rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 				{ rel: 'me', href: 'https://misskey.io/@misskey_hub_deploy' },
 			],
-			meta: [
-				{ name: 'twitter:card', content: 'summary_large_image' },
-			]
+			meta: [{ name: 'twitter:card', content: 'summary_large_image' }],
 		},
 	},
 	content: {
 		navigation: {
-			fields: [
-				'date',
-				'description',
-			]
+			fields: ['date', 'description'],
 		},
 		highlight: {
 			theme: {
@@ -106,8 +101,17 @@ export default defineNuxtConfig({
 				dark: 'github-dark',
 			},
 			preload: [
-				'ini', 'sql', 'yml', 'nginx', 'bash',
-				JSON.parse(readFileSync('./node_modules/aiscript-vscode/aiscript/syntaxes/aiscript.tmLanguage.json', { encoding: 'utf-8' })),
+				'ini',
+				'sql',
+				'yml',
+				'nginx',
+				'bash',
+				JSON.parse(
+					readFileSync(
+						'./node_modules/aiscript-vscode/aiscript/syntaxes/aiscript.tmLanguage.json',
+						{ encoding: 'utf-8' },
+					),
+				),
 			],
 		},
 	},
@@ -133,7 +137,7 @@ export default defineNuxtConfig({
 		},
 	},
 	alias: {
-		'bi': 'bootstrap-icons/icons',
+		bi: 'bootstrap-icons/icons',
 	},
 	vite: {
 		plugins: [
@@ -147,11 +151,11 @@ export default defineNuxtConfig({
 							params: {
 								overrides: {
 									removeViewBox: false,
-								}
-							}
-						}
-					]
-				}
+								},
+							},
+						},
+					],
+				},
 			}),
 		],
 	},
@@ -159,10 +163,8 @@ export default defineNuxtConfig({
 		preset: 'vercel',
 		vercel: {
 			config: {
-				routes: [
-					...getOldHubRedirects(),
-				],
-			}
+				routes: [...getOldHubRedirects()],
+			},
 		},
 		plugins: [
 			'@/server/plugins/appendComment.ts',

@@ -1,9 +1,7 @@
 {
 	summary: 'ミュートの一覧を取得します。',
 	description: 'ログイン中のユーザが設定しているミュートの一覧を取得します。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',

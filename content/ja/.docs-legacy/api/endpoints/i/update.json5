@@ -1,9 +1,7 @@
 {
 	summary: 'プロフィール・設定を更新します。',
 	description: 'ログイン中のユーザーのプロフィール・設定を更新します。パラメータの値を設定しなければ、その項目は変更されません。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -290,10 +288,7 @@
 							type: 'string',
 						},
 					},
-					required: [
-						'name',
-						'value',
-					],
+					required: ['name', 'value'],
 				},
 				description: 'ユーザーの追加情報。最大で16個の要素を持つことができます。',
 			},
@@ -353,11 +348,7 @@
 			},
 			ffVisibility: {
 				type: 'string',
-				enum: [
-					'public',
-					'followers',
-					'private',
-				],
+				enum: ['public', 'followers', 'private'],
 				description: 'ユーザーのフォロー・フォロワー関係の公開範囲。publicにすると全体に、followersにするとフォロワーのみに公開されます。privateにすると誰にも公開されません。',
 			},
 			pinnedPageId: {

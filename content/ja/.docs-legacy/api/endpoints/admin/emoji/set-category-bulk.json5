@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -21,9 +19,7 @@
 				description: 'Use `null` to reset the category.',
 			},
 		},
-		required: [
-			'ids',
-		],
+		required: ['ids'],
 	},
 	res: {},
 	errors: {},

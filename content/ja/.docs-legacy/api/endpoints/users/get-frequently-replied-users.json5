@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザーが頻繁にリプライを送信しているユーザーを取得します。',
 	description: 'ユーザーが頻繁にリプライを送信しているユーザーを取得します。最新の1000件のノートを対象に集計を行います。',
-	tags: [
-		'users',
-	],
+	tags: ['users'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -21,9 +19,7 @@
 				description: '取得するユーザーの最大数。',
 			},
 		},
-		required: [
-			'userId',
-		],
+		required: ['userId'],
 	},
 	res: {
 		type: 'array',
@@ -48,10 +44,7 @@
 					description: 'userに送信したリプライ数を、あるユーザーに送った最大のリプライ数で割ったもの。最大のリプライの送信先がuserである場合、weightは1になります。',
 				},
 			},
-			required: [
-				'user',
-				'weight',
-			],
+			required: ['user', 'weight'],
 		},
 		description: 'リプライをよく送信しているユーザーの一覧。',
 	},

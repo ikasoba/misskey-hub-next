@@ -1,9 +1,7 @@
 {
 	summary: 'クリップを取得します。',
 	description: 'クリップを取得します。',
-	tags: [
-		'clips',
-	],
+	tags: ['clips'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'クリップのid。',
 			},
 		},
-		required: [
-			'clipId',
-		],
+		required: ['clipId'],
 	},
 	res: {
 		type: 'object',

@@ -1,9 +1,7 @@
 {
 	summary: 'ノートを含むクリップを取得します。',
 	description: 'ノートを含むクリップを取得します。',
-	tags: [
-		'clips',
-	],
+	tags: ['clips'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ノートのid。',
 			},
 		},
-		required: [
-			'noteId',
-		],
+		required: ['noteId'],
 	},
 	res: {
 		type: 'array',

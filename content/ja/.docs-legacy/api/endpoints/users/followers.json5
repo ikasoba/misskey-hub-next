@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'users',
-	],
+	tags: ['users'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -31,9 +29,7 @@
 						format: 'misskey:id',
 					},
 				},
-				required: [
-					'userId',
-				],
+				required: ['userId'],
 			},
 			{
 				properties: {
@@ -46,10 +42,7 @@
 						description: 'The local host is represented with `null`.',
 					},
 				},
-				required: [
-					'username',
-					'host',
-				],
+				required: ['username', 'host'],
 			},
 		],
 	},

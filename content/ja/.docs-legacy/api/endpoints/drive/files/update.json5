@@ -1,9 +1,7 @@
 {
 	summary: 'ファイルの名前・場所を変更します。',
 	description: 'ファイルの名前・場所を変更します。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -34,9 +32,7 @@
 				description: 'ファイルの新しいキャプション。',
 			},
 		},
-		required: [
-			'fileId',
-		],
+		required: ['fileId'],
 	},
 	res: {
 		type: 'object',

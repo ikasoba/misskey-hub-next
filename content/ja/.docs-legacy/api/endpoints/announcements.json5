@@ -1,9 +1,7 @@
 {
 	summary: 'サーバーからのお知らせを取得します。',
 	description: 'サーバーからのお知らせを取得します。',
-	tags: [
-		'meta',
-	],
+	tags: ['meta'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -83,14 +81,7 @@
 					description: 'お知らせが既読であればtrueになります。クレデンシャルを送信した場合のみ返されます。',
 				},
 			},
-			required: [
-				'id',
-				'createdAt',
-				'updatedAt',
-				'text',
-				'title',
-				'imageUrl',
-			],
+			required: ['id', 'createdAt', 'updatedAt', 'text', 'title', 'imageUrl'],
 		},
 	},
 	errors: {},

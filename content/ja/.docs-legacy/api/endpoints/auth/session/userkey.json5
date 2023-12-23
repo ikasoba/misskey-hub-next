@@ -1,9 +1,7 @@
 {
 	summary: 'アプリのアクセストークンを発行します。',
 	description: 'アプリのアクセストークンを発行します。',
-	tags: [
-		'auth',
-	],
+	tags: ['auth'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -17,10 +15,7 @@
 				description: 'セッションのトークン。',
 			},
 		},
-		required: [
-			'appSecret',
-			'token',
-		],
+		required: ['appSecret', 'token'],
 	},
 	res: {
 		type: 'object',
@@ -41,10 +36,7 @@
 				$ref: 'misskey://UserDetailedNotMe',
 			},
 		},
-		required: [
-			'accessToken',
-			'user',
-		],
+		required: ['accessToken', 'user'],
 	},
 	errors: {
 		'fcab192a-2c5a-43b7-8ad8-9b7054d8d40d': {

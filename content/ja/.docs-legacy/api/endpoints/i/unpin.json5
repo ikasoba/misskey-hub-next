@@ -1,9 +1,7 @@
 {
 	summary: '指定したノートをピン留めから解除します。',
 	description: '指定したノートをピン留めから解除します。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ピン留めから解除するノートのid。',
 			},
 		},
-		required: [
-			'noteId',
-		],
+		required: ['noteId'],
 	},
 	res: {
 		type: 'object',

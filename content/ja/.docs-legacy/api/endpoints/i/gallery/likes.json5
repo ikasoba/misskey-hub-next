@@ -1,9 +1,7 @@
 {
 	summary: 'ギャラリーの投稿につけたいいねを取得します。',
 	description: 'ログイン中のユーザーがギャラリーの投稿につけたいいねを取得します。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -51,10 +49,7 @@
 					$ref: 'misskey://GalleryPost',
 				},
 			},
-			required: [
-				'id',
-				'post',
-			],
+			required: ['id', 'post'],
 		},
 	},
 	errors: {},

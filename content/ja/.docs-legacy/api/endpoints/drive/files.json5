@@ -1,9 +1,7 @@
 {
 	summary: '指定のフォルダーあるいはルート階層にある、ファイルの一覧を取得します。',
 	description: 'ログイン中のユーザのドライブ以下、指定のフォルダーあるいはルート階層にある、ファイルの一覧を取得します。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -18,19 +16,19 @@
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
-				description: '指定すると、idがその値よりも大きいファイルを返します。', 
+				description: '指定すると、idがその値よりも大きいファイルを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
-				description: '指定すると、idがその値よりも小さいファイルを返します。', 
+				description: '指定すると、idがその値よりも小さいファイルを返します。',
 			},
 			folderId: {
 				type: 'string',
 				format: 'misskey:id',
 				nullable: true,
 				default: null,
-				description: '親フォルダーのid。null（デフォルト）であればルート階層にあるファイルを取得します。', 
+				description: '親フォルダーのid。null（デフォルト）であればルート階層にあるファイルを取得します。',
 			},
 			type: {
 				type: 'string',

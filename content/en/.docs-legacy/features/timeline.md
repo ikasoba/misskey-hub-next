@@ -26,18 +26,18 @@ Misskey has other features where you can create timelines with more granularity.
 
 ## Comparison
 
-| Source                |            |        |   Timeline |       |            |
-|-----------------------|------------|--------|---------|------------|------------|
-| User                  | Visibility | Home   | Local    | Social     | Global |
-| Local (Followers)     | Public     | ✔      | ✔        | ✔          | ✔          |
-|                       | Home       | ✔      |          | ✔          |            |
-|                       | Followers  | ✔      |          | ✔          |            |
-| Remote (Followers)    | Public     | ✔      |          | ✔          | ✔          |
-|                       | Home       | ✔      |          | ✔          |            |
-|                       | Followers  | ✔      |          | ✔          |            |
-| local (Non-followers) | Public     |        | ✔        | ✔          | ✔          |
-|                       | Home       |        |          |            |            |
-|                       | Followers  |        |          |            |            |
-| Remote (Non-followers)| Public     |        |          |            | ✔          |
-|                       | Home       |        |          |            |            |
-|                       | Followers  |        |          |            |            |
+| Source                 |            |      | Timeline |        |        |
+| ---------------------- | ---------- | ---- | -------- | ------ | ------ |
+| User                   | Visibility | Home | Local    | Social | Global |
+| Local (Followers)      | Public     | ✔   | ✔       | ✔     | ✔     |
+|                        | Home       | ✔   |          | ✔     |        |
+|                        | Followers  | ✔   |          | ✔     |        |
+| Remote (Followers)     | Public     | ✔   |          | ✔     | ✔     |
+|                        | Home       | ✔   |          | ✔     |        |
+|                        | Followers  | ✔   |          | ✔     |        |
+| local (Non-followers)  | Public     |      | ✔       | ✔     | ✔     |
+|                        | Home       |      |          |        |        |
+|                        | Followers  |      |          |        |        |
+| Remote (Non-followers) | Public     |      |          |        | ✔     |
+|                        | Home       |      |          |        |        |
+|                        | Followers  |      |          |        |        |

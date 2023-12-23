@@ -1,9 +1,7 @@
 {
 	summary: '自身のアカウント情報を取得します。',
 	description: '自身のアカウント情報を取得します。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {},
 	res: {

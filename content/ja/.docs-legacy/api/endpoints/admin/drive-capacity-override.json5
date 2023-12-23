@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -17,10 +15,7 @@
 				nullable: true,
 			},
 		},
-		required: [
-			'userId',
-			'overrideMb',
-		],
+		required: ['userId', 'overrideMb'],
 	},
 	res: {},
 	errors: {},

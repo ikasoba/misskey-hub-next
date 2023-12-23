@@ -1,9 +1,7 @@
 {
 	summary: 'ブロックの一覧を取得します。',
 	description: 'ログイン中のユーザが設定しているブロックの一覧を取得します。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',

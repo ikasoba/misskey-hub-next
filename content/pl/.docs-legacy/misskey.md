@@ -108,4 +108,5 @@ Jednakże, funkcjonalność aplikacji trzech będzie w tyle za oficjalnym klient
 ### Kim jest ta słodka dziewczyna z kocimi uszamy którą czasem widzisz?
 
 To jest bogini "broniąca" Misskey, Ai(Oni ją nazywali słodką, yay!)
+
 <div class="info">ℹ️ Aby dowiedzieć się więcej o Ai zajrzyj na stronę o niej <a href="https://xn--931a.moe/" target="_blank">tutaj</a> (Po japońsku).</div>

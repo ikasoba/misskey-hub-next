@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザーのフォローを解除します。',
 	description: 'ユーザーのフォローを解除します。',
-	tags: [
-		'following',
-	],
+	tags: ['following'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'フォローを解除するユーザーのid。',
 			},
 		},
-		required: [
-			'userId',
-		],
+		required: ['userId'],
 	},
 	res: {
 		type: 'object',

@@ -10,6 +10,7 @@ Après avoir validé vos modifications, vous pourrez également configurer les o
 ## Liste de widgets disponibles
 
 ### Notifications
+
 Affiche vos notifications en liste. Vous pouvez modifier les types de notifications via le menu du widget. En désactivant « Paramètres globaux » vous pouvez choisir le type de notifications affichées.
 
 ### Fil

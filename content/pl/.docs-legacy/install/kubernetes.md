@@ -8,18 +8,18 @@ Nigdy nie zmieniaj nazwy domeny(hostname) instancji kiedy zaczniesz z niej korzy
 
 ## TrueCharts i TrueNAS Scale
 
-Helmy dla Misskey są hostowane na TrueCharts które jest repozytorium zaprojektowanym z myślą o TrueNAS Scale ale mogą one też być zainstalowane jako normalne Helmy. [TrueCharts](https://truecharts.org/charts/incubator/misskey/) ma listę wszystkich dostępnych Helmów oraz dokumentację na temat instalacji. [TrueCharts Discord](https://discord.gg/Ax9ZgzKx9t) jest również źródłem na którym możesz uzyskać pomoc. Misskey jest obecnie na *incubator*.
+Helmy dla Misskey są hostowane na TrueCharts które jest repozytorium zaprojektowanym z myślą o TrueNAS Scale ale mogą one też być zainstalowane jako normalne Helmy. [TrueCharts](https://truecharts.org/charts/incubator/misskey/) ma listę wszystkich dostępnych Helmów oraz dokumentację na temat instalacji. [TrueCharts Discord](https://discord.gg/Ax9ZgzKx9t) jest również źródłem na którym możesz uzyskać pomoc. Misskey jest obecnie na _incubator_.
 
 :::tip Wymagania
 
 - TrueNAS Scale
-lub
+  lub
 - Klaster Kubernetes i Helm
-:::
+  :::
 
 ## TrueNAS Scale
 
-Podążaj za instrukcjami na [TrueCharts Guide](https://truecharts.org/manual/guides/Adding-TrueCharts/). Dodaj *incubator* train i zainstaluj aplikację Misskey. Jedyna konfiguracja Misskey która jest wymagana to URL instancji. Aplikacja również używa reverse proxy Traefik aby udostępnić usługę na zewnątrz świata przez HTTPS. TrueCharts integruje się z Traefikiem domyślnie, ale inne opcje mogą być używane z ręczną konfiguracją.
+Podążaj za instrukcjami na [TrueCharts Guide](https://truecharts.org/manual/guides/Adding-TrueCharts/). Dodaj _incubator_ train i zainstaluj aplikację Misskey. Jedyna konfiguracja Misskey która jest wymagana to URL instancji. Aplikacja również używa reverse proxy Traefik aby udostępnić usługę na zewnątrz świata przez HTTPS. TrueCharts integruje się z Traefikiem domyślnie, ale inne opcje mogą być używane z ręczną konfiguracją.
 
 ## Manualny Helm
 

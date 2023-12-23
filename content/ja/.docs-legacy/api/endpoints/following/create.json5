@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザーをフォローします。',
 	description: 'ユーザーをフォローします。',
-	tags: [
-		'following',
-	],
+	tags: ['following'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'フォローするユーザーのid。',
 			},
 		},
-		required: [
-			'userId',
-		],
+		required: ['userId'],
 	},
 	res: {
 		type: 'object',

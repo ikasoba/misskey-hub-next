@@ -1,5 +1,5 @@
 ---
-description: "Canale in cui è convogliato il flusso di Note della Timeline Home"
+description: 'Canale in cui è convogliato il flusso di Note della Timeline Home'
 ---
 
 # `homeTimeline`

@@ -1,9 +1,7 @@
 {
 	summary: 'フォローリクエストの一覧を取得します。',
 	description: 'ログイン中のユーザーに届いたフォローリクエストの一覧を取得します。',
-	tags: [
-		'following',
-	],
+	tags: ['following'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -40,11 +38,7 @@
 					$ref: 'misskey://UserLite',
 				},
 			},
-			required: [
-				'id',
-				'follower',
-				'followee',
-			],
+			required: ['id', 'follower', 'followee'],
 		},
 	},
 	errors: {},

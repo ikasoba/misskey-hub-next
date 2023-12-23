@@ -1,9 +1,7 @@
 {
 	summary: 'ハッシュタグの詳細を取得します。',
 	description: 'ハッシュタグの詳細を取得します。',
-	tags: [
-		'hashtags',
-	],
+	tags: ['hashtags'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -13,9 +11,7 @@
 				description: '検索対象のハッシュタグ。',
 			},
 		},
-		required: [
-			'tag',
-		],
+		required: ['tag'],
 	},
 	res: {
 		type: 'object',

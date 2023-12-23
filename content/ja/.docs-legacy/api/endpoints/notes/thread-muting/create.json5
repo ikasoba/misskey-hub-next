@@ -1,9 +1,7 @@
 {
 	summary: 'スレッドをミュートします。',
 	description: 'スレッドをミュートします。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -11,12 +9,10 @@
 			noteId: {
 				type: 'string',
 				format: 'misskey:id',
-				description: 'ノートのid。このノートを含むスレッド全体がミュートされます。',	
+				description: 'ノートのid。このノートを含むスレッド全体がミュートされます。',
 			},
 		},
-		required: [
-			'noteId',
-		],
+		required: ['noteId'],
 	},
 	res: {},
 	errors: {

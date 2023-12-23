@@ -1,19 +1,14 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'charts',
-	],
+	tags: ['charts'],
 	requireCredential: false,
 	req: {
 		type: 'object',
 		properties: {
 			span: {
 				type: 'string',
-				enum: [
-					'day',
-					'hour',
-				],
+				enum: ['day', 'hour'],
 			},
 			limit: {
 				type: 'integer',
@@ -27,9 +22,7 @@
 				default: null,
 			},
 		},
-		required: [
-			'span',
-		],
+		required: ['span'],
 	},
 	res: {
 		type: 'object',

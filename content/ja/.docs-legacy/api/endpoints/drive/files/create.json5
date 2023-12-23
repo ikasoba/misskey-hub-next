@@ -1,9 +1,7 @@
 {
 	summary: 'ファイルをアップロードします。',
 	description: 'ログイン中のユーザのドライブにファイルをアップロードします。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {},
 	res: {

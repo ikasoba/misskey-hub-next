@@ -4,15 +4,15 @@ Pojęcia związane Misskey.
 
 ## ActivityPub
 
-Protokół(metoda) używana do osiągnięcia zdecentralizowanej natury Misskey.  Wykorzystanie jego pozwala instancjom na komunikacje między sobą, tworząc też rzecz nazywaną Fediwersum.
+Protokół(metoda) używana do osiągnięcia zdecentralizowanej natury Misskey. Wykorzystanie jego pozwala instancjom na komunikacje między sobą, tworząc też rzecz nazywaną Fediwersum.
 
 ## AiScript
 
-Język programowania stworzony z myślą o Misskey.  [Zobacz tutaj po więcej informacji](/src/docs/advanced/aiscript)
+Język programowania stworzony z myślą o Misskey. [Zobacz tutaj po więcej informacji](/src/docs/advanced/aiscript)
 
 ## API
 
-Jest to interfejs pozwalający  na operowanie Misskey za pomocą programu, dostępne dla każdej instancji. [Więcej informacji](/src/pl/docs/api)
+Jest to interfejs pozwalający na operowanie Misskey za pomocą programu, dostępne dla każdej instancji. [Więcej informacji](/src/pl/docs/api)
 
 ## Bot
 

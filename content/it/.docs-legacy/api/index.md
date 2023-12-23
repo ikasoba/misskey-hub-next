@@ -107,7 +107,6 @@ Le proprietà incluse nella risposta sono le seguenti:
 
 Una volta che hai ottenuto il **token di accesso** puoi usare le API inviando richieste HTTP alle varie risorse.
 
-
 :::tip
 
 - HTTP APIはすべてPOSTで、リクエスト/レスポンスともにJSON形式です（drive/files/createを除く）。
@@ -120,8 +119,8 @@ Una volta che hai ottenuto il **token di accesso** puoi usare le API inviando ri
 
 ```json
 {
-    "i": "HogEFugA1341",
-    "detail": false
+	"i": "HogEFugA1341",
+	"detail": false
 }
 ```
 

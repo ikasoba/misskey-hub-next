@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'lists',
-	],
+	tags: ['lists'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -13,9 +11,7 @@
 				format: 'misskey:id',
 			},
 		},
-		required: [
-			'listId',
-		],
+		required: ['listId'],
 	},
 	res: {
 		type: 'object',

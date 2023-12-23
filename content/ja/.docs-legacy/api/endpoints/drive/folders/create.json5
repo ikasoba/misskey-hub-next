@@ -1,9 +1,7 @@
 {
 	summary: 'フォルダーを作成します。',
 	description: 'ログイン中のユーザのドライブにフォルダーを作成します。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',

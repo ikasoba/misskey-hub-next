@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'hashtags',
-	],
+	tags: ['hashtags'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -16,7 +14,7 @@
 				minimum: 1,
 				maximum: 100,
 				default: 10,
-				description: '取得するユーザーの最大数。'
+				description: '取得するユーザーの最大数。',
 			},
 			sort: {
 				type: 'string',
@@ -32,28 +30,18 @@
 			},
 			state: {
 				type: 'string',
-				enum: [
-					'all',
-					'alive',
-				],
+				enum: ['all', 'alive'],
 				default: 'all',
 				description: 'aliveにすると、5日間以内にアクティブであったユーザーのみを取得します。',
 			},
 			origin: {
 				type: 'string',
-				enum: [
-					'combined',
-					'local',
-					'remote',
-				],
+				enum: ['combined', 'local', 'remote'],
 				default: 'local',
 				description: 'ユーザーの所属サーバーの区分。local（デフォルト）, remoteにすると、それぞれローカル・リモートユーザーのみを取得します。combinedにすると、すべてのユーザーを対象にします。',
 			},
 		},
-		required: [
-			'tag',
-			'sort',
-		],
+		required: ['tag', 'sort'],
 	},
 	res: {
 		type: 'array',

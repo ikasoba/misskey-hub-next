@@ -16,6 +16,7 @@ APIを使い始めるには、APIを利用するアカウントに紐づいた**
 - 後者の場合: **「アプリケーション利用者にアクセストークンの発行をリクエストする」** に進む
 
 ### 自分自身のアクセストークンを手動発行する
+
 Misskey Webの「設定 > API」で、自分のアクセストークンを発行できます。
 
 :::danger
@@ -23,6 +24,7 @@ Misskey Webの「設定 > API」で、自分のアクセストークンを発行
 :::
 
 ### アプリケーション利用者にアクセストークンの発行をリクエストする
+
 アプリケーションを利用するユーザー(以下単に「ユーザー」と呼びます)のアクセストークンを取得するには、以下の手順で発行をリクエストします。
 
 :::tip
@@ -33,6 +35,7 @@ Misskey Webの「設定 > API」で、自分のアクセストークンを発行
 :::
 
 #### Step 1
+
 UUIDを生成する。以後これを**セッションID**と呼びます。
 
 :::danger
@@ -40,6 +43,7 @@ UUIDを生成する。以後これを**セッションID**と呼びます。
 :::
 
 #### Step 2
+
 アプリケーション認証フォームをユーザーのブラウザで表示させる。認証フォームは、以下の形式のURLで開くことができます:
 
 ```
@@ -47,6 +51,7 @@ https://{host}/miauth/{session}
 ```
 
 ここで、
+
 - `{host}`の部分は、ユーザーのサーバーのホストに置き換えます。通常ホストはユーザーが入力します。
 - `{session}`の部分は、セッションIDに置き換えます。
 
@@ -60,12 +65,15 @@ https://{host}/miauth/{session}
 | `permission` | アプリケーションが要求する権限。<br>要求する権限を`,`で区切って列挙します。権限の一覧は[こちら](./permission.md)で確認できます。 |
 
 :::tip{label='例'}
+
 ```
 https://misskey.io/miauth/c1f6d42b-468b-4fd2-8274-e58abdedef6f?name=MyApp&callback=https%3A%2F%2Fmyapp.example.com%2Fcallback&permission=write:notes,write:following,read:drive
 ```
+
 :::
 
 #### Step 3
+
 ユーザーがアプリケーションアクセスを許可した後、次の形式のURLにPOSTリクエストすると、レスポンスとしてアクセストークンを含むJSONが返ります。
 
 ```
@@ -73,6 +81,7 @@ https://{host}/api/miauth/{session}/check
 ```
 
 ここで、
+
 - `{host}`の部分は、ユーザーのサーバーのホストに置き換えます。
 - `{session}`の部分は、セッションIDに置き換えます。
 
@@ -84,6 +93,7 @@ https://{host}/api/miauth/{session}/check
 | `user`  | ユーザーの情報。             |
 
 ## APIの利用
+
 アクセストークンが取得できたら、各種エンドポイントにリクエストすることでAPIの利用が行えます。
 
 :::tip
@@ -99,12 +109,13 @@ https://{host}/api/miauth/{session}/check
 
 ```json
 {
-    "i": "HogEFugA1341",
-    "detail": false
+	"i": "HogEFugA1341",
+	"detail": false
 }
 ```
 
 <!--TODO:「APIリファレンス」をリンクに差し替え-->
+
 APIの詳細は、APIリファレンスを参照してください。
 
 :::warning

@@ -1,5 +1,5 @@
 ---
-description: "Kanał gdzie strumieniowane są posty z ośi globalnej."
+description: 'Kanał gdzie strumieniowane są posty z ośi globalnej.'
 ---
 
 # `globalTimeline`

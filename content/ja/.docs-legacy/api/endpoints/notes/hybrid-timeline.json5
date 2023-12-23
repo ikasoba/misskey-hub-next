@@ -1,9 +1,7 @@
 {
 	summary: 'ソーシャルタイムライン (STL) を取得します。',
 	description: 'ソーシャルタイムライン (STL) を取得します。ソーシャルタイムラインには、サーバー内の全てのパブリックなノートと自分のフォローしているユーザーのノートが含まれます。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: true,
 	req: {
 		type: 'object',

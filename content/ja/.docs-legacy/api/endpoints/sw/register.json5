@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -18,11 +16,7 @@
 				type: 'string',
 			},
 		},
-		required: [
-			'endpoint',
-			'auth',
-			'publickey',
-		],
+		required: ['endpoint', 'auth', 'publickey'],
 	},
 	res: {
 		type: 'object',
@@ -33,10 +27,7 @@
 				type: 'string',
 				optional: true,
 				nullable: false,
-				enum: [
-					'already-subscribed',
-					'subscribed',
-				],
+				enum: ['already-subscribed', 'subscribed'],
 			},
 			key: {
 				type: 'string',
@@ -44,9 +35,7 @@
 				nullable: true,
 			},
 		},
-		required: [
-			'key',
-		],
+		required: ['key'],
 	},
 	errors: {},
 }

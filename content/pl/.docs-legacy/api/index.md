@@ -66,12 +66,12 @@ gdzie:
 
 Jest też kilka parametrów żądań w URL:
 
-| Nazwa | Opis |
-| ---- | ---- |
-| `name` | Nazwa Aplikacji |
-| `icon` | Ikona Aplikacji。 |
-| `callback` | URL do którego użytkowink zostanie przekierowany po uwierzytelnieniu z ID Sesji dodanym by przekierować z parametrem żądania `session`. |
-| `permission` | Zgody których aplikacjia wymaga. <br>Lista zezwoleń które mogą być żądane, podzelona`,`. Lista zezwoleń jest dostępna [tutaj](TODO). |
+| Nazwa        | Opis                                                                                                                                    |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`       | Nazwa Aplikacji                                                                                                                         |
+| `icon`       | Ikona Aplikacji。                                                                                                                       |
+| `callback`   | URL do którego użytkowink zostanie przekierowany po uwierzytelnieniu z ID Sesji dodanym by przekierować z parametrem żądania `session`. |
+| `permission` | Zgody których aplikacjia wymaga. <br>Lista zezwoleń które mogą być żądane, podzelona`,`. Lista zezwoleń jest dostępna [tutaj](TODO).    |
 
 :::tip
 
@@ -98,10 +98,10 @@ gdzie:
 
 Właściwości zawarte w odpowiedzi:
 
-| Nazwa | Opis |
-| ---- | ---- |
-| `token` | teoken dostępu użytkownika |
-| `user` | informacje na temat użytkownika |
+| Nazwa   | Opis                            |
+| ------- | ------------------------------- |
+| `token` | teoken dostępu użytkownika      |
+| `user`  | informacje na temat użytkownika |
 
 ## Używanie API
 
@@ -119,8 +119,8 @@ Przykład JSONa z tokenem dostępu:
 
 ```json
 {
-    "i": "HogEFugA1341",
-    "detail": false
+	"i": "HogEFugA1341",
+	"detail": false
 }
 ```
 

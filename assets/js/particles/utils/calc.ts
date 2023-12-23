@@ -10,12 +10,12 @@
 | with the option of easing bias.
 ------------------------------------------ */
 export function rand(min, max?, ease?) {
-	if(max === undefined) {
+	if (max === undefined) {
 		max = min;
 		min = 0;
 	}
 	let random = Math.random();
-	if(ease) {
+	if (ease) {
 		random = ease(Math.random(), 0, 1, 1);
 	}
 	return random * (max - min) + min;
@@ -33,12 +33,12 @@ export function rand(min, max?, ease?) {
 | with the option of easing bias.
 ------------------------------------------ */
 export function randInt(min, max?, ease?) {
-	if(max === undefined) {
+	if (max === undefined) {
 		max = min;
 		min = 0;
 	}
 	let random = Math.random();
-	if(ease) {
+	if (ease) {
 		random = ease(Math.random(), 0, 1, 1);
 	}
 	return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -70,7 +70,10 @@ export function randArr(arr) {
 | to an output min/max.
 ------------------------------------------ */
 export function map(val, inputMin, inputMax, outputMin, outputMax) {
-	return ((outputMax - outputMin) * ((val - inputMin) / (inputMax - inputMin))) + outputMin;
+	return (
+		(outputMax - outputMin) * ((val - inputMin) / (inputMax - inputMin)) +
+		outputMin
+	);
 }
 
 /*
@@ -101,7 +104,7 @@ export function lerp(current, target, mix) {
 | Round up a value to the next highest interval.
 ------------------------------------------ */
 export function roundToUpperInterval(value, interval) {
-	if(value % interval === 0) {
+	if (value % interval === 0) {
 		value += 0.0001;
 	}
 	return Math.ceil(value / interval) * interval;
@@ -117,7 +120,7 @@ export function roundToUpperInterval(value, interval) {
 | Round down a value to the next lowest interval.
 ------------------------------------------ */
 export function roundToLowerInterval(value, interval) {
-	if(value % interval === 0) {
+	if (value % interval === 0) {
 		value -= 0.0001;
 	}
 	return Math.floor(value / interval) * interval;
@@ -149,10 +152,10 @@ export function roundToNearestInterval(value, interval) {
 export function intersectSphere(a, b) {
 	let distance = Math.sqrt(
 		(a.x - b.x) * (a.x - b.x) +
-		(a.y - b.y) * (a.y - b.y) +
-		(a.z - b.z) * (a.z - b.z)
+			(a.y - b.y) * (a.y - b.y) +
+			(a.z - b.z) * (a.z - b.z),
 	);
-	return distance < (a.radius + b.radius);
+	return distance < a.radius + b.radius;
 }
 
 /*
@@ -166,7 +169,7 @@ export function intersectSphere(a, b) {
 | Convert from grid coords to index.
 ------------------------------------------ */
 export function getIndexFromCoords(x, y, w) {
-	return x + (y * w);
+	return x + y * w;
 }
 
 /*
@@ -181,21 +184,21 @@ export function getIndexFromCoords(x, y, w) {
 export function getCoordsFromIndex(i, w) {
 	return {
 		x: i % w,
-		y: Math.floor(i / w)
-	}
+		y: Math.floor(i / w),
+	};
 }
 
 export function visibleHeightAtZDepth(depth, camera) {
 	// https://discourse.threejs.org/t/functions-to-calculate-the-visible-width-height-at-a-given-z-depth-from-a-perspective-camera/269
 	let cameraOffset = camera.position.z;
-	if ( depth < cameraOffset ) depth -= cameraOffset;
+	if (depth < cameraOffset) depth -= cameraOffset;
 	else depth += cameraOffset;
-	let vFOV = camera.fov * Math.PI / 180; 
-	return 2 * Math.tan( vFOV / 2 ) * Math.abs( depth );
+	let vFOV = (camera.fov * Math.PI) / 180;
+	return 2 * Math.tan(vFOV / 2) * Math.abs(depth);
 }
 
 export function visibleWidthAtZDepth(depth, camera) {
 	// https://discourse.threejs.org/t/functions-to-calculate-the-visible-width-height-at-a-given-z-depth-from-a-perspective-camera/269
-	let height = visibleHeightAtZDepth( depth, camera );
+	let height = visibleHeightAtZDepth(depth, camera);
 	return height * camera.aspect;
 }

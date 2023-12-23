@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'meta',
-	],
+	tags: ['meta'],
 	requireCredential: false,
 	req: {
 		type: 'object',

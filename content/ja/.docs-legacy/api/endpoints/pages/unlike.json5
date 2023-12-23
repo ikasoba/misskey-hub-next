@@ -1,9 +1,7 @@
 {
 	summary: 'ページへのいいねを取り消します。',
 	description: 'ページへのいいねを取り消します。',
-	tags: [
-		'pages',
-	],
+	tags: ['pages'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ページのid。',
 			},
 		},
-		required: [
-			'pageId',
-		],
+		required: ['pageId'],
 	},
 	res: {},
 	errors: {

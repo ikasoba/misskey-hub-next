@@ -17,7 +17,10 @@ const TIME_LENGTH = 8;
 const NODE_LENGTH = 4;
 const NOISE_LENGTH = 4;
 
-const nodeId = customAlphabet('0123456789abcdefghijklmnopqrstuvwxyz', NODE_LENGTH)();
+const nodeId = customAlphabet(
+	'0123456789abcdefghijklmnopqrstuvwxyz',
+	NODE_LENGTH,
+)();
 let counter = 0;
 
 function getTime(time: number): string {
@@ -37,7 +40,7 @@ export function genAidx(t: number): string {
 	return getTime(t) + nodeId + getNoise();
 }
 
-export function parseAidx(id: string): { date: Date; } {
+export function parseAidx(id: string): { date: Date } {
 	const time = parseInt(id.slice(0, TIME_LENGTH), 36) + TIME2000;
 	return { date: new Date(time) };
 }

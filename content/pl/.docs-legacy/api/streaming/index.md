@@ -29,7 +29,7 @@ gdzie:
 Możesz też się połączyć bez tokenu dostępu ale nie będziesz miał dostępu do wszystkich danych.
 :::
 
-Kiedy połączyłeś się, możesz subskrybować do postów opisanych poniżej, ale  nadal nie możesz odtrzymywać nowych postów na ośi czasu
+Kiedy połączyłeś się, możesz subskrybować do postów opisanych poniżej, ale nadal nie możesz odtrzymywać nowych postów na ośi czasu
 
 Aby odtrzymywać takie zdarzenia musisz połączyć się z **kanałem** jak opisano poniżej.
 
@@ -67,7 +67,7 @@ gdzie
 
 - `channel` to nazwa kanału z którym chcesz się połączyć. Rodzaje kanałów są opisane niżej w tym dokumencje.
 - `id` jest to arbitralne ID do wykonywania interakcji z kanałem. Jest ono wymagane do identyfikowania, z którego kanału jest wiadomość, ponieważ strumień zawiera wiele kanałów. To ID może być czymś w stylu UUID albo losową liczbą.
-- `params`  to parametry wymagane kiedy dołącza się na kanał. Różne kanały wymagają innych parametrów przy połączeniu. Kiedy kanał nie wymaga parametrów, można tą wartość zignorować.
+- `params` to parametry wymagane kiedy dołącza się na kanał. Różne kanały wymagają innych parametrów przy połączeniu. Kiedy kanał nie wymaga parametrów, można tą wartość zignorować.
 
 :::tip
 ID nie jest co kanał, a co połączenie z kanałem, ponieważ kanał może być potrzebny kilka razy ale z innym parametrem.
@@ -199,10 +199,10 @@ Jeśli nie chcesz już otrzymywać zdarzeń związanych z postem, np. gdy nie po
 Wyślij następujące dane JSON:
 ``js
 {
- type: 'unsubNote',
- body: {
-  id: 'xxxxxxxxxxxxxx'
- }
+type: 'unsubNote',
+body: {
+id: 'xxxxxxxxxxxxxx'
+}
 }
 
 ```
@@ -211,3 +211,4 @@ gdzie
 - `id` to ID notatki, którą chcesz odhaczyć.
 
 Po wysłaniu tej wiadomości nie będą już wysyłane żadne zdarzenia związane z tą notką.
+```

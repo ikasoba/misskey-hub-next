@@ -2,8 +2,7 @@
 description: 'このガイドではMisskeyのインストール・セットアップ方法について解説します。'
 ---
 
-Misskeyを手動で構築する
-================================================================
+# Misskeyを手動で構築する
 
 このガイドではMisskeyのインストール・セットアップ方法について解説します。
 
@@ -12,7 +11,9 @@ Misskeyを手動で構築する
 :::
 
 :::tip{label='前提条件'}
+
 #### 以下のソフトウェアがインストール・設定されていること
+
 - **[Node.js](https://nodejs.org/en/)** (20.4.x以上)
 - **[PostgreSQL](https://www.postgresql.org/)** (15以上)
 - **[Redis](https://redis.io/)**
@@ -21,13 +22,15 @@ Misskeyを手動で構築する
 Debian/Ubuntuをお使いであれば、`build-essential`パッケージをインストールしておくと良いです。
 
 #### corepackが有効化されていること
+
 ```sh
 sudo corepack enable
 ```
+
 :::
 
-ユーザーの作成
-----------------------------------------------------------------
+## ユーザーの作成
+
 Misskeyはrootユーザーで実行しない方がよいため、代わりにユーザーを作成します。
 Debianの例:
 
@@ -35,8 +38,8 @@ Debianの例:
 adduser --disabled-password --disabled-login misskey
 ```
 
-Misskeyのインストール
-----------------------------------------------------------------
+## Misskeyのインストール
+
 ```sh
 sudo -iu misskey
 git clone --recursive https://github.com/misskey-dev/misskey.git
@@ -46,8 +49,8 @@ git submodule update --init
 NODE_ENV=production pnpm install --frozen-lockfile
 ```
 
-設定
-----------------------------------------------------------------
+## 設定
+
 設定サンプルの`.config/example.yml`をコピーし、`default.yml`にリネームします。
 
 ```sh
@@ -56,8 +59,8 @@ cp .config/example.yml .config/default.yml
 
 `default.yml` をファイル内の指示に従って編集します。
 
-ビルドと初期化
-----------------------------------------------------------------
+## ビルドと初期化
+
 次のコマンドでMisskeyのビルドとデータベースの初期化を行います。
 これにはしばらく時間がかかります。
 
@@ -66,8 +69,8 @@ NODE_ENV=production pnpm run build
 pnpm run init
 ```
 
-起動
-----------------------------------------------------------------
+## 起動
+
 お疲れ様でした。以下のコマンドでMisskeyを起動できます。
 
 ```sh
@@ -84,7 +87,7 @@ systemdサービスのファイルを作成
 
 エディタで開き、以下のコードを貼り付けて保存:
 
-``` ini
+```ini
 [Unit]
 Description=Misskey daemon
 
@@ -128,6 +131,7 @@ sudo systemctl start misskey
 ::::
 
 ## Misskeyのアップデート方法
+
 :::warning
 アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
 :::
@@ -153,6 +157,7 @@ sudo systemctl restart misskey
 
 :::tip
 ビルドや起動時にエラーが発生した場合は、以下のコマンドをお試しください:
+
 - `pnpm run clean`または`pnpm run clean-all`
 - `pnpm rebuild`
-:::
+  :::

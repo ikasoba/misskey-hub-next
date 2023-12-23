@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'channels',
-	],
+	tags: ['channels'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -25,9 +23,7 @@
 				nullable: true,
 			},
 		},
-		required: [
-			'name',
-		],
+		required: ['name'],
 	},
 	res: {
 		type: 'object',

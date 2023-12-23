@@ -53,7 +53,7 @@ export class Drop {
 			transparent: true,
 			opacity: this.opacity,
 			depthTest: false,
-			precision: 'lowp'
+			precision: 'lowp',
 		});
 
 		this.mesh = new THREE.Mesh(this.geometry, this.material);
@@ -69,16 +69,25 @@ export class Drop {
 
 	update(i) {
 		this.progress += this.rate * this.loader.deltaTimeNormal;
-		this.mesh.position.y = this.yBase - Ease.inExpo(this.progress, 0, 1, 1) * this.yBase;
-		this.mesh.scale.set(this.size, this.size + this.size * 16 * Ease.inExpo(this.progress, 0, 1, 1), this.size);
+		this.mesh.position.y =
+			this.yBase - Ease.inExpo(this.progress, 0, 1, 1) * this.yBase;
+		this.mesh.scale.set(
+			this.size,
+			this.size + this.size * 16 * Ease.inExpo(this.progress, 0, 1, 1),
+			this.size,
+		);
 		this.mesh.material.opacity = Ease.inExpo(this.progress, 0, 1, 1);
 
-		if(this.progress >= 1) {
+		if (this.progress >= 1) {
 			this.geometry.dispose();
 			this.material.dispose();
 			this.group.remove(this.mesh);
 			this.array.splice(i, 1);
-			this.system.createRipple(this.mesh.position.x, this.mesh.position.z, this.strength);
+			this.system.createRipple(
+				this.mesh.position.x,
+				this.mesh.position.z,
+				this.strength,
+			);
 		}
 	}
 }

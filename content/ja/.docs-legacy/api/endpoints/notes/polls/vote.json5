@@ -1,9 +1,7 @@
 {
 	summary: 'ノートのアンケートに投票します。',
 	description: 'ノートのアンケートに投票します。複数の選択肢に投票するには、choiceを変更して複数回リクエストを行ってください。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -15,13 +13,10 @@
 			},
 			choice: {
 				type: 'integer',
-				description: '投票する選択肢。'
+				description: '投票する選択肢。',
 			},
 		},
-		required: [
-			'noteId',
-			'choice',
-		],
+		required: ['noteId', 'choice'],
 	},
 	res: {},
 	errors: {

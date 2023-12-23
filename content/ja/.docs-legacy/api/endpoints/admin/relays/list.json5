@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -36,18 +34,10 @@
 					optional: false,
 					nullable: false,
 					default: 'requesting',
-					enum: [
-						'requesting',
-						'accepted',
-						'rejected',
-					],
+					enum: ['requesting', 'accepted', 'rejected'],
 				},
 			},
-			required: [
-				'id',
-				'inbox',
-				'status',
-			],
+			required: ['id', 'inbox', 'status'],
 		},
 	},
 	errors: {},

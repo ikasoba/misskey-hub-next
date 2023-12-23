@@ -1,9 +1,7 @@
 {
 	summary: 'アプリを認証するためのトークンを作成します。',
 	description: 'アプリを認証するためのトークンを作成します。',
-	tags: [
-		'auth',
-	],
+	tags: ['auth'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -13,9 +11,7 @@
 				description: 'アプリケーションのシークレットキー。',
 			},
 		},
-		required: [
-			'appSecret',
-		],
+		required: ['appSecret'],
 	},
 	res: {
 		type: 'object',
@@ -36,10 +32,7 @@
 				description: 'セッションのURL。',
 			},
 		},
-		required: [
-			'token',
-			'url',
-		],
+		required: ['token', 'url'],
 	},
 	errors: {
 		'92f93e63-428e-4f2f-a5a4-39e1407fe998': {

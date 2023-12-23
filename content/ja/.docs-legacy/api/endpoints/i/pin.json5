@@ -1,9 +1,7 @@
 {
 	summary: '指定したノートをピン留めに登録します。',
 	description: '指定したノートをピン留めに登録します。ピン留めされたノートはプロフィール情報に含まれ、Misskey Webではユーザーのプロフィールページで表示されます。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ピン留めに登録するノートのid。',
 			},
 		},
-		required: [
-			'noteId',
-		],
+		required: ['noteId'],
 	},
 	res: {
 		type: 'object',

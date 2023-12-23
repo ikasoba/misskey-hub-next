@@ -1,9 +1,7 @@
 {
 	summary: 'ハッシュタグの一覧を取得します。',
 	description: 'ハッシュタグの一覧を取得します。',
-	tags: [
-		'hashtags',
-	],
+	tags: ['hashtags'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -46,12 +44,10 @@
 					'+attachedRemoteUsers',
 					'-attachedRemoteUsers',
 				],
-				description: 'ソート順。+ は降順、- は昇順を示します。'
+				description: 'ソート順。+ は降順、- は昇順を示します。',
 			},
 		},
-		required: [
-			'sort',
-		],
+		required: ['sort'],
 	},
 	res: {
 		type: 'array',

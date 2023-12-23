@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'non-productive',
-	],
+	tags: ['non-productive'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -28,9 +26,7 @@
 				format: 'misskey:id',
 			},
 		},
-		required: [
-			'required',
-		],
+		required: ['required'],
 	},
 	res: {},
 	errors: {},

@@ -51,7 +51,7 @@ export class Particle {
 			transparent: true,
 			opacity: this.opacity,
 			depthTest: false,
-			precision: 'lowp'
+			precision: 'lowp',
 		});
 
 		this.mesh = new THREE.Mesh(this.geometry, this.material);
@@ -66,17 +66,16 @@ export class Particle {
 	}
 
 	update() {
-		const scale = 0.075 + (Math.abs(this.velocity.y) / 25)
+		const scale = 0.075 + Math.abs(this.velocity.y) / 25;
 		this.mesh.scale.set(scale, scale, scale);
 
 		//const opacity = 0.15 + (Math.abs(this.velocity.y) / 1)
 		//this.mesh.material.opacity = Calc.clamp(opacity, 0.15, 1);
-		const opacity = 0 + (Math.abs(this.velocity.y) / 1)
+		const opacity = 0 + Math.abs(this.velocity.y) / 1;
 		this.mesh.material.opacity = Calc.clamp(opacity, 0, 1);
 
 		this.velocity.y += (this.base.y - this.mesh.position.y) * this.lerpFactor;
 		this.velocity.multiplyScalar(this.dampFactor);
 		this.mesh.position.add(this.velocity);
 	}
-
 }

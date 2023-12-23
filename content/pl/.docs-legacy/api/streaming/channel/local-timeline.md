@@ -1,5 +1,5 @@
 ---
-description: "Kanał gdzie posty z lokalnej Ośi czasu są nadawane."
+description: 'Kanał gdzie posty z lokalnej Ośi czasu są nadawane.'
 ---
 
 # `localTimeline`

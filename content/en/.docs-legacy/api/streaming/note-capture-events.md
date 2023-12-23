@@ -1,6 +1,7 @@
 # Note Capture Events
 
 ## `reacted`
+
 <MkSchemaViewer :schema="{
 	type: 'object',
 	properties: {
@@ -18,6 +19,7 @@
 Occurs when a reaction is made to the target note.
 
 ## `pollVoted`
+
 <MkSchemaViewer :schema="{
 	type: 'object',
 	properties: {
@@ -35,6 +37,7 @@ Occurs when a reaction is made to the target note.
 Occurs when the survey attached to the target note is voted on.
 
 ## `deleted`
+
 <MkSchemaViewer :schema="{
 	type: 'object',
 	properties: {

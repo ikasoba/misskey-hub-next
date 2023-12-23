@@ -1,6 +1,7 @@
 # 投稿キャプチャイベント
 
 ## `reacted`
+
 <MkSchemaViewer :schema="{
 	type: 'object',
 	properties: {
@@ -18,6 +19,7 @@
 対象のノートにリアクションがされた場合に発生します。
 
 ## `pollVoted`
+
 <MkSchemaViewer :schema="{
 	type: 'object',
 	properties: {
@@ -35,6 +37,7 @@
 対象のノートに添付されたアンケートに投票がされた場合に発生します。
 
 ## `deleted`
+
 <MkSchemaViewer :schema="{
 	type: 'object',
 	properties: {

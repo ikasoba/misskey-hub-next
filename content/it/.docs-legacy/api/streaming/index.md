@@ -1,5 +1,5 @@
 ---
-description: "La Streaming API mette a disposizione informazioni in real-time (es: nuovi post nella timeline, reazioni, followers ecc...) oltre ad altre attività."
+description: 'La Streaming API mette a disposizione informazioni in real-time (es: nuovi post nella timeline, reazioni, followers ecc...) oltre ad altre attività.'
 ---
 
 # Streaming API

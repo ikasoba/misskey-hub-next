@@ -1,9 +1,7 @@
 {
 	summary: 'ページへのいいねの一覧を取得します。',
 	description: 'ログイン中のユーザーがつけたページへのいいねの一覧を取得します。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -23,7 +21,7 @@
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
-			  description: '指定すると、idがその値よりも小さいいいねを返します。',
+				description: '指定すると、idがその値よりも小さいいいねを返します。',
 			},
 		},
 		required: [],
@@ -49,10 +47,7 @@
 					$ref: 'misskey://Page',
 				},
 			},
-			required: [
-				'id',
-				'page',
-			],
+			required: ['id', 'page'],
 		},
 	},
 	errors: {},

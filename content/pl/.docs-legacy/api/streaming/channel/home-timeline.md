@@ -1,5 +1,5 @@
 ---
-description: "Kanał gdzie posty gdzie posty z ośi domowej są strumieniowane."
+description: 'Kanał gdzie posty gdzie posty z ośi domowej są strumieniowane.'
 ---
 
 # `homeTimeline`

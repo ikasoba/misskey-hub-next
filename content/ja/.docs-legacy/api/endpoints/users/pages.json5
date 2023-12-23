@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザーが作成し、公開しているページを取得します。',
 	description: 'ユーザーが作成し、公開しているページを取得します。',
-	tags: [
-		'users',
-	],
+	tags: ['users'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -31,9 +29,7 @@
 				description: '指定すると、idがその値よりもc小さいページを返します。',
 			},
 		},
-		required: [
-			'userId',
-		],
+		required: ['userId'],
 	},
 	res: {
 		type: 'array',

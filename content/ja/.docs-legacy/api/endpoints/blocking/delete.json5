@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザーのブロックを解除します。',
 	description: 'ユーザーのブロックを解除します。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ブロックを解除するユーザーのid。',
 			},
 		},
-		required: [
-			'userId',
-		],
+		required: ['userId'],
 	},
 	res: {
 		type: 'object',

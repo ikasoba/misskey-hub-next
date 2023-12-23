@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -13,9 +11,7 @@
 				format: 'misskey:id',
 			},
 		},
-		required: [
-			'emojiId',
-		],
+		required: ['emojiId'],
 	},
 	res: {
 		type: 'object',
@@ -29,9 +25,7 @@
 				format: 'id',
 			},
 		},
-		required: [
-			'id',
-		],
+		required: ['id'],
 	},
 	errors: {
 		'e2785b66-dca3-4087-9cac-b93c541cc425': {

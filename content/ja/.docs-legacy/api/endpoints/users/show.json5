@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザーの情報を取得します。',
 	description: 'ユーザーの情報を取得します。',
-	tags: [
-		'users',
-	],
+	tags: ['users'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -16,9 +14,7 @@
 						description: 'ユーザーのid。',
 					},
 				},
-				required: [
-					'userId',
-				],
+				required: ['userId'],
 			},
 			{
 				properties: {
@@ -32,9 +28,7 @@
 						},
 					},
 				},
-				required: [
-					'userIds',
-				],
+				required: ['userIds'],
 			},
 			{
 				properties: {
@@ -48,9 +42,7 @@
 						description: 'ユーザーが所属するサーバーのホスト名（ドメインなど）。ローカルユーザーを対象にする場合はnullを指定します。',
 					},
 				},
-				required: [
-					'username',
-				],
+				required: ['username'],
 			},
 		],
 	},

@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'lists',
-	],
+	tags: ['lists'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -18,10 +16,7 @@
 				maxLength: 100,
 			},
 		},
-		required: [
-			'listId',
-			'name',
-		],
+		required: ['listId', 'name'],
 	},
 	res: {
 		type: 'object',

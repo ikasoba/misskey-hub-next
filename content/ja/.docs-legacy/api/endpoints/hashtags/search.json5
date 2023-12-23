@@ -1,9 +1,7 @@
 {
 	summary: 'ハッシュタグを検索します。',
 	description: 'ハッシュタグを検索します。',
-	tags: [
-		'hashtags',
-	],
+	tags: ['hashtags'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -25,9 +23,7 @@
 				description: '検索結果の先頭 offset 個をスキップします。',
 			},
 		},
-		required: [
-			'query',
-		],
+		required: ['query'],
 	},
 	res: {
 		type: 'array',
@@ -37,7 +33,7 @@
 			type: 'string',
 			optional: false,
 			nullable: false,
-			description: '検索結果。使用数の降順でソートされます。'
+			description: '検索結果。使用数の降順でソートされます。',
 		},
 	},
 	errors: {},

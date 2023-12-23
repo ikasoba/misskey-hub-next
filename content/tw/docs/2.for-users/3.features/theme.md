@@ -55,7 +55,6 @@
 換句話說，即使該主題中的 `props` 中沒有名為 `panel` 的鍵，也假定基本佈景主題中存在 `panel`。
 
 [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
-
 [_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
 #### 可與值一起使用的語法

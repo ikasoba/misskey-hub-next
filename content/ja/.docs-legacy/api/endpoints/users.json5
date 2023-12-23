@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'users',
-	],
+	tags: ['users'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -31,22 +29,12 @@
 			},
 			state: {
 				type: 'string',
-				enum: [
-					'all',
-					'admin',
-					'moderator',
-					'adminOrModerator',
-					'alive',
-				],
+				enum: ['all', 'admin', 'moderator', 'adminOrModerator', 'alive'],
 				default: 'all',
 			},
 			origin: {
 				type: 'string',
-				enum: [
-					'combined',
-					'local',
-					'remote',
-				],
+				enum: ['combined', 'local', 'remote'],
 				default: 'local',
 			},
 			hostname: {

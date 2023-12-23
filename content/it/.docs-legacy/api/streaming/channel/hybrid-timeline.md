@@ -1,5 +1,5 @@
 ---
-description: "Canale in cui è convogliato il flusso di Note della Timeline Sociale"
+description: 'Canale in cui è convogliato il flusso di Note della Timeline Sociale'
 ---
 
 # `hybridTimeline`

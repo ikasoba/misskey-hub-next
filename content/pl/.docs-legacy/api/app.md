@@ -15,12 +15,12 @@ Wyślij informacje do punktu końcowego [`app/create`](endpoints/app/create.html
 
 `json.
 {
-    // App Name.
-    "name": "test",.
-    // App description.
-    "description": "moja aplikacja testowa",.
-    // Uprawnienia dla aplikacji.
-    "permission": ["write:notes"]
+// App Name.
+"name": "test",.
+// App description.
+"description": "moja aplikacja testowa",.
+// Uprawnienia dla aplikacji.
+"permission": ["write:notes"]
 }
 
 ```
@@ -44,8 +44,8 @@ Gdy już jesteś pewien, że ## 2 jest zrobiony, POSTuj `appSecret` i `token` z 
 
 `json.
 {
-  "appSecret": "fAb12cD34Ef56gH78Ij16kL32Mn64oPf",.
-  "token": "798b9f6e-248d-43a7-a919-fabc664027f1"
+"appSecret": "fAb12cD34Ef56gH78Ij16kL32Mn64oPf",.
+"token": "798b9f6e-248d-43a7-a919-fabc664027f1"
 }
 
 ```
@@ -78,3 +78,4 @@ fetch("https://misskey.io/api/notes/create", {
  credentials: 'omit', }
 });
 ```
+````

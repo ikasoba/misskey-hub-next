@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザーを通報します。',
 	description: 'ユーザーを通報します。',
-	tags: [
-		'users',
-	],
+	tags: ['users'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -20,10 +18,7 @@
 				description: '通報の理由を説明する文章やリンク。',
 			},
 		},
-		required: [
-			'userId',
-			'comment',
-		],
+		required: ['userId', 'comment'],
 	},
 	res: {},
 	errors: {

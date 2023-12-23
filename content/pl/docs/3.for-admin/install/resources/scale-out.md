@@ -14,14 +14,12 @@ dbReplications: true
 
 # リードレプリカのリストをここで設定します(いくつでも設定可能)
 dbSlaves:
-  -
-    host: foo
+  - host: foo
     port: 5432
     db: misskey
     user: xxxxx
     pass: xxxxx
-  -
-    host: bar
+  - host: bar
     port: 5432
     db: misskey
     user: xxxxx

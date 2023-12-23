@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'meta',
-	],
+	tags: ['meta'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -12,9 +10,7 @@
 				type: 'string',
 			},
 		},
-		required: [
-			'url',
-		],
+		required: ['url'],
 	},
 	res: {},
 	errors: {},

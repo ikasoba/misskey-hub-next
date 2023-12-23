@@ -1,9 +1,7 @@
 {
 	summary: 'ファイルの一覧を、フォルダを横断して取得します。',
 	description: 'ログイン中のユーザーのドライブにあるファイルの一覧を、フォルダを横断して取得します。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',

@@ -1,9 +1,7 @@
 {
 	summary: 'ページにいいねをつけます。',
 	description: 'ページにいいねをつけます。',
-	tags: [
-		'pages',
-	],
+	tags: ['pages'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ページのid。',
 			},
 		},
-		required: [
-			'pageId',
-		],
+		required: ['pageId'],
 	},
 	res: {},
 	errors: {

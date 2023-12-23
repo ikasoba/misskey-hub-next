@@ -1,9 +1,7 @@
 {
 	summary: 'ノートを検索します。',
 	description: 'ノートを検索します。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -54,9 +52,7 @@
 				description: '指定すると、そのチャンネルに属するノートを検索します。userIdと併せて指定した場合、channelIdは無視されます。',
 			},
 		},
-		required: [
-			'query',
-		],
+		required: ['query'],
 	},
 	res: {
 		type: 'array',

@@ -1,9 +1,7 @@
 {
 	summary: '指定のフォルダーあるいはルート階層にある、フォルダーの一覧を取得します。',
 	description: 'ログイン中のユーザのドライブ以下、指定のフォルダーあるいはルート階層にある、フォルダーの一覧を取得します。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -18,12 +16,12 @@
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
-				description: '指定すると、idがその値よりも大きいフォルダーを返します。', 
+				description: '指定すると、idがその値よりも大きいフォルダーを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
-				description: '指定すると、idがその値よりも小さいフォルダーを返します。', 
+				description: '指定すると、idがその値よりも小さいフォルダーを返します。',
 			},
 			folderId: {
 				type: 'string',

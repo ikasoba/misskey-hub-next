@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'messaging',
-	],
+	tags: ['messaging'],
 	requireCredential: true,
 	req: {
 		type: 'object',

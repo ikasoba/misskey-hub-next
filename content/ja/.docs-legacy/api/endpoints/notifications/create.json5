@@ -1,9 +1,7 @@
 {
 	summary: 'アプリからの通知を行います。',
 	description: 'アプリからの通知を行います。',
-	tags: [
-		'notifications',
-	],
+	tags: ['notifications'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -23,9 +21,7 @@
 				description: '通知のアイコン画像へのURL。',
 			},
 		},
-		required: [
-			'body',
-		],
+		required: ['body'],
 	},
 	res: {},
 	errors: {},

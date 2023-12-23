@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -126,22 +124,11 @@
 			},
 			sensitiveMediaDetection: {
 				type: 'string',
-				enum: [
-					'none',
-					'all',
-					'local',
-					'remote',
-				],
+				enum: ['none', 'all', 'local', 'remote'],
 			},
 			sensitiveMediaDetectionSensitivity: {
 				type: 'string',
-				enum: [
-					'medium',
-					'low',
-					'high',
-					'veryLow',
-					'veryHigh',
-				],
+				enum: ['medium', 'low', 'high', 'veryLow', 'veryHigh'],
 			},
 			setSensitiveFlagAutomatically: {
 				type: 'boolean',

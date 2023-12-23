@@ -1,9 +1,7 @@
 {
 	summary: 'リモートユーザーの情報を更新します。',
 	description: 'リモートユーザーの情報を更新します。',
-	tags: [
-		'federation',
-	],
+	tags: ['federation'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'リモートユーザーのid。',
 			},
 		},
-		required: [
-			'userId',
-		],
+		required: ['userId'],
 	},
 	res: {},
 	errors: {},

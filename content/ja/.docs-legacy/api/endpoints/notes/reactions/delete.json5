@@ -1,9 +1,7 @@
 {
 	summary: 'ノートのリアクションを解除します。',
 	description: 'ノートのリアクションを解除します。',
-	tags: [
-		'reactions',
-	],
+	tags: ['reactions'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ノートのid。',
 			},
 		},
-		required: [
-			'noteId',
-		],
+		required: ['noteId'],
 	},
 	res: {},
 	errors: {

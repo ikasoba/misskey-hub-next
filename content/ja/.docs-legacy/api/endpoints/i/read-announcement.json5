@@ -1,9 +1,7 @@
 {
 	summary: 'お知らせを既読にします。',
 	description: 'お知らせを既読にします。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: '既読にするお知らせのid。',
 			},
 		},
-		required: [
-			'announcementId',
-		],
+		required: ['announcementId'],
 	},
 	res: {},
 	errors: {

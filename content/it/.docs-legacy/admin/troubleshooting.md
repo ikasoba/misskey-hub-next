@@ -1,5 +1,5 @@
 ---
-description: "Leggi questa pagina quando ci sono degli errori"
+description: 'Leggi questa pagina quando ci sono degli errori'
 ---
 
 # Soluzione agli errori di installazione

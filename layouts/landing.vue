@@ -2,15 +2,15 @@
 const isNavOpen = ref<boolean>(false);
 
 useHead({
-    htmlAttrs: {
-        class: 'scroll-pt-20 lg:scroll-pt-24',
-    },
+	htmlAttrs: {
+		class: 'scroll-pt-20 lg:scroll-pt-24',
+	},
 });
 </script>
 <template>
-    <div>
-        <div class="main-content">
-            <slot></slot>
-        </div>
-    </div>
+	<div>
+		<div class="main-content">
+			<slot></slot>
+		</div>
+	</div>
 </template>

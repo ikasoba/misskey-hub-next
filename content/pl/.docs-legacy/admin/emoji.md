@@ -43,30 +43,30 @@ Definicja typu dla tego pliku wyglądałaby tak, gdzie `Meta` to struktura całe
 
 ```typescript
 class Meta {
- metaVersion: number;
- host: string;
- /**
-  * Data i czas reprezentowane zwrócone przez ECMAScript `Date.prototype.toString`.
-  */
- exportedAt: string;
- emojis: Emoji[];
+	metaVersion: number;
+	host: string;
+	/**
+	 * Data i czas reprezentowane zwrócone przez ECMAScript `Date.prototype.toString`.
+	 */
+	exportedAt: string;
+	emojis: Emoji[];
 }
 
 class Emoji {
- downloaded: boolean;
- fileName: string;
- emoji: {
-  id: string;
-  updatedAt: string;
-  name: string;
-  host: null;
-  category: string;
-  originalUrl: string;
-  publicUrl: string;
-  uri: null;
-  type: string;
-  aliases: string[];
- };
+	downloaded: boolean;
+	fileName: string;
+	emoji: {
+		id: string;
+		updatedAt: string;
+		name: string;
+		host: null;
+		category: string;
+		originalUrl: string;
+		publicUrl: string;
+		uri: null;
+		type: string;
+		aliases: string[];
+	};
 }
 ```
 

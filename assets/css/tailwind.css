@@ -1,6 +1,6 @@
 .bi::before,
-[class^="bi-"]::before,
-[class*=" bi-"]::before,
+[class^='bi-']::before,
+[class*=' bi-']::before,
 .bi {
 	display: inline-block;
 	font-family: bootstrap-icons !important;
@@ -9,7 +9,7 @@
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-	vertical-align: -.125em;
+	vertical-align: -0.125em;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -30,11 +30,11 @@ body {
 
 /*  */
 .hoverRubber:hover {
-    animation: .75s linear 0s 1 normal both running mfm-rubberBand;
+	animation: 0.75s linear 0s 1 normal both running mfm-rubberBand;
 }
 
 .hoverTada:hover {
-    animation: .75s linear 0s 1 normal both running tada;
+	animation: 0.75s linear 0s 1 normal both running tada;
 }
 
 /* Github Markdown Css Override */
@@ -84,7 +84,6 @@ html.dark .markdown-body {
 	--color-danger-fg: #f85149;
 }
 
-
 html.light .markdown-body {
 	color-scheme: light;
 	--color-prettylights-syntax-comment: #6e7781;
@@ -132,7 +131,7 @@ html.light .markdown-body {
 }
 
 .markdown-body {
-	--color-canvas-default: transparent!important;
+	--color-canvas-default: transparent !important;
 	@apply font-content-sans;
 }
 
@@ -146,7 +145,7 @@ html.light .markdown-body {
 .markdown-body :not(.ignore) h4 > a[href^='#'],
 .markdown-body > h5 > a[href^='#'],
 .markdown-body :not(.ignore) h5 > a[href^='#'],
-.markdown-body > h6 > a[href^='#'] ,
+.markdown-body > h6 > a[href^='#'],
 .markdown-body :not(.ignore) h6 > a[href^='#'] {
 	color: var(--color-fg-default);
 	cursor: pointer;
@@ -162,16 +161,16 @@ html.light .markdown-body {
 .markdown-body :not(.ignore) h4 > a[href^='#']:hover,
 .markdown-body > h5 > a[href^='#']:hover,
 .markdown-body :not(.ignore) h5 > a[href^='#']:hover,
-.markdown-body > h6 > a[href^='#']:hover ,
+.markdown-body > h6 > a[href^='#']:hover,
 .markdown-body :not(.ignore) h6 > a[href^='#']:hover {
 	text-decoration: none;
 }
 
-.markdown-body > ul ,
+.markdown-body > ul,
 .markdown-body :not(.ignore) ul {
-    list-style: disc;
+	list-style: disc;
 }
-.markdown-body > ol ,
+.markdown-body > ol,
 .markdown-body :not(.ignore) ol {
-    list-style: decimal;
+	list-style: decimal;
 }

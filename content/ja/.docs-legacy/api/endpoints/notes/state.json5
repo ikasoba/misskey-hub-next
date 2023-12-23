@@ -1,9 +1,7 @@
 {
 	summary: 'ノートに対するログイン中のユーザによるアクション（お気に入り・ウォッチ・スレッドミュート）を取得します。',
 	description: 'ノートに対するログイン中のユーザによるアクション（お気に入り・ウォッチ・スレッドミュート）を取得します。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ノートのid。',
 			},
 		},
-		required: [
-			'noteId',
-		],
+		required: ['noteId'],
 	},
 	res: {
 		type: 'object',
@@ -27,26 +23,22 @@
 				type: 'boolean',
 				optional: false,
 				nullable: false,
-				description: 'ノートをお気に入りに登録するとtrueになります。'
+				description: 'ノートをお気に入りに登録するとtrueになります。',
 			},
 			isWatching: {
 				type: 'boolean',
 				optional: false,
 				nullable: false,
-				description: 'ノートをウォッチするとtrueになります。'
+				description: 'ノートをウォッチするとtrueになります。',
 			},
 			isMutedThread: {
 				type: 'boolean',
 				optional: false,
 				nullable: false,
-				description: 'ノートから始まる、またはノートが属するスレッドをミュートするとtrueになります。'
+				description: 'ノートから始まる、またはノートが属するスレッドをミュートするとtrueになります。',
 			},
 		},
-		required: [
-			'isFavorited',
-			'isWatching',
-			'isMutedThread',
-		],
+		required: ['isFavorited', 'isWatching', 'isMutedThread'],
 	},
 	errors: {},
 }

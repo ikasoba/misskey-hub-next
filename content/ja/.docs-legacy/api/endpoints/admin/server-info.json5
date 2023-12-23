@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -52,10 +50,7 @@
 						nullable: false,
 					},
 				},
-				required: [
-					'model',
-					'cores',
-				],
+				required: ['model', 'cores'],
 			},
 			mem: {
 				type: 'object',
@@ -69,9 +64,7 @@
 						format: 'bytes',
 					},
 				},
-				required: [
-					'total',
-				],
+				required: ['total'],
 			},
 			fs: {
 				type: 'object',
@@ -91,10 +84,7 @@
 						format: 'bytes',
 					},
 				},
-				required: [
-					'total',
-					'used',
-				],
+				required: ['total', 'used'],
 			},
 			net: {
 				type: 'object',
@@ -108,21 +98,10 @@
 						example: 'eth0',
 					},
 				},
-				required: [
-					'interface',
-				],
+				required: ['interface'],
 			},
 		},
-		required: [
-			'machine',
-			'os',
-			'node',
-			'psql',
-			'cpu',
-			'mem',
-			'fs',
-			'net',
-		],
+		required: ['machine', 'os', 'node', 'psql', 'cpu', 'mem', 'fs', 'net'],
 	},
 	errors: {},
 }

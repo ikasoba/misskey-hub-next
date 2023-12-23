@@ -1,9 +1,7 @@
 {
 	summary: '指定したユーザーリストのタイムラインを取得します。',
 	description: '指定したユーザーリストのタイムラインを取得します。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -46,7 +44,7 @@
 			includeRenotedMyNotes: {
 				type: 'boolean',
 				default: true,
-				description: 'trueにすると、Renoteされたログイン中のユーザーのノートを含めます。'
+				description: 'trueにすると、Renoteされたログイン中のユーザーのノートを含めます。',
 			},
 			includeLocalRenotes: {
 				type: 'boolean',
@@ -59,9 +57,7 @@
 				description: 'trueにすると、ファイルが添付されたノートだけを返します。',
 			},
 		},
-		required: [
-			'listId',
-		],
+		required: ['listId'],
 	},
 	res: {
 		type: 'array',

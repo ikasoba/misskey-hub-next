@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'app',
-	],
+	tags: ['app'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -13,9 +11,7 @@
 				format: 'misskey:id',
 			},
 		},
-		required: [
-			'appId',
-		],
+		required: ['appId'],
 	},
 	res: {
 		type: 'object',

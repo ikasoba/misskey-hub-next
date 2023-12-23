@@ -1,21 +1,17 @@
 {
 	summary: 'メールアドレスが利用可能か確認します。',
 	description: 'メールアドレスが利用可能か確認します。',
-	tags: [
-		'users',
-	],
+	tags: ['users'],
 	requireCredential: false,
 	req: {
 		type: 'object',
 		properties: {
 			emailAddress: {
 				type: 'string',
-				description: 'メールアドレス。'
+				description: 'メールアドレス。',
 			},
 		},
-		required: [
-			'emailAddress',
-		],
+		required: ['emailAddress'],
 	},
 	res: {
 		type: 'object',
@@ -35,10 +31,7 @@
 				description: '利用可能でない場合の理由。以下のいずれかの値が入ります。used: 同じメールアドレスを使っている他のユーザーがすでに存在します。format: フォーマットが不正です。disposable: 使い捨てメールアドレスです。mx: DNSのMXレコードが存在しません。利用可能であればnullが返されます。',
 			},
 		},
-		required: [
-			'available',
-			'reason',
-		],
+		required: ['available', 'reason'],
 	},
 	errors: {},
 }

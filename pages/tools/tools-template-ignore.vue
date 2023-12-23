@@ -7,18 +7,18 @@
 -->
 
 <template>
-    <div class='container mx-auto max-w-screen-xl px-6 py-6'>
-        <h1 class='text-2xl lg:text-3xl font-bold mb-4'>
-            {{ $t('_aaaaaaaa.title') }}
-        </h1>
+	<div class="container mx-auto max-w-screen-xl px-6 py-6">
+		<h1 class="text-2xl lg:text-3xl font-bold mb-4">
+			{{ $t('_aaaaaaaa.title') }}
+		</h1>
 
-        <!-- ここに書く！ -->
-    </div>
+		<!-- ここに書く！ -->
+	</div>
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 definePageMeta({
-    layout: 'tools',
+	layout: 'tools',
 });
 
 const { t } = useI18n();
@@ -28,6 +28,4 @@ route.meta.title = t('_aaaaaaaa.title');
 route.meta.description = t('_aaaaaaaa.description');
 </script>
 
-<style module>
-
-</style>
+<style module></style>

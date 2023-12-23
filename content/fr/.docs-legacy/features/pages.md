@@ -44,7 +44,7 @@ Les blocs spéciaux fournissent des fonctions uniques à votre page. Par exemple
 
 Les variables sont utilisées pour des pages dynamiques. Vous pouvez indiquer la valeur d’une variable via <b>{ nom de variable }</b> dans le texte. Par exemple dans <b>Hello { thing } world!</b>, si la valeur de la variable (thing) est <b>ai</b>, alors le texte deviendrait <b>Hello ai world!</b>.
 
-Les variables sont évaluées de haut en bas, et il n’est pas possible d’appeler une variable avant qu’elle ne soit définie.Par exemple, soit <b>A, B, C</b> définies dans cet ordre, <b>A</b> et <b>B</b> peuvent être appelées dans <b>C</b> mais  <b>B</b> et <b>C</b> ne peuvent pas être appelées dans <b>A</b>.
+Les variables sont évaluées de haut en bas, et il n’est pas possible d’appeler une variable avant qu’elle ne soit définie.Par exemple, soit <b>A, B, C</b> définies dans cet ordre, <b>A</b> et <b>B</b> peuvent être appelées dans <b>C</b> mais <b>B</b> et <b>C</b> ne peuvent pas être appelées dans <b>A</b>.
 
 Pour recevoir une entrée, placez un bloc « Entrée » sur la page et utilisez le nom de variable pour indiquer la variable où enregistrer la valeur entrée (la variable sera automatiquement créée).
 La variable peut ensuite être utilisée pour réaliser des actions en fonction de l’entrée.

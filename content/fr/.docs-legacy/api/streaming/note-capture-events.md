@@ -1,6 +1,7 @@
 # Évènements de capture de note
 
 ## `reacted`
+
 <MkSchemaViewer :schema="{
 	type: 'object',
 	properties: {
@@ -18,6 +19,7 @@
 Lorsqu’une personne réagit à une note.
 
 ## `pollVoted`
+
 <MkSchemaViewer :schema="{
 	type: 'object',
 	properties: {
@@ -35,6 +37,7 @@ Lorsqu’une personne réagit à une note.
 Lorsque qu’une personne participe à un sondage.
 
 ## `deleted`
+
 <MkSchemaViewer :schema="{
 	type: 'object',
 	properties: {

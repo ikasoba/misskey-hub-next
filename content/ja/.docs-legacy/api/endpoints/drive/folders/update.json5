@@ -1,9 +1,7 @@
 {
 	summary: 'フォルダーの名前・場所を変更します。',
 	description: 'ログイン中のユーザのドライブにあるフォルダーの名前・場所を変更します。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -25,9 +23,7 @@
 				description: '移動先の親フォルダーのid。',
 			},
 		},
-		required: [
-			'folderId',
-		],
+		required: ['folderId'],
 	},
 	res: {
 		type: 'object',

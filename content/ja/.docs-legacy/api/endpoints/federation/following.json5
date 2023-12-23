@@ -1,9 +1,7 @@
 {
 	summary: 'サーバーからローカルユーザーへのフォローを取得します。',
 	description: 'サーバーからローカルユーザーへのフォローを取得します。',
-	tags: [
-		'federation',
-	],
+	tags: ['federation'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -15,12 +13,12 @@
 			sinceId: {
 				type: 'string',
 				format: 'misskey:id',
-				description: '指定すると、idがその値よりも大きいフォローを返します。'
+				description: '指定すると、idがその値よりも大きいフォローを返します。',
 			},
 			untilId: {
 				type: 'string',
 				format: 'misskey:id',
-				description: '指定すると、idがその値よりも小さいフォローを返します。'
+				description: '指定すると、idがその値よりも小さいフォローを返します。',
 			},
 			limit: {
 				type: 'integer',
@@ -30,9 +28,7 @@
 				description: '取得するフォローの最大数。',
 			},
 		},
-		required: [
-			'host',
-		],
+		required: ['host'],
 	},
 	res: {
 		type: 'array',

@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザー名・ホスト名からユーザーを検索します。',
 	description: 'ユーザー名・ホスト名からユーザーを検索します。30日間投稿のないユーザーや、凍結されているユーザーは除外されます。結果はユーザーの最後の投稿が新しい順にソートされます。ログイン中であれば（＝認証情報が送信されれば）、フォローしているユーザーを優先的に検索します。',
-	tags: [
-		'users',
-	],
+	tags: ['users'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -33,14 +31,10 @@
 		},
 		anyOf: [
 			{
-				required: [
-					'username',
-				],
+				required: ['username'],
 			},
 			{
-				required: [
-					'host',
-				],
+				required: ['host'],
 			},
 		],
 	},

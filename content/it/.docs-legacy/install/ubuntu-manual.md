@@ -279,7 +279,7 @@ cd misskey
 git checkout master
 ```
 
-Installa le librerie necessarie: 
+Installa le librerie necessarie:
 
 ```
 NODE_ENV=production pnpm install --frozen-lockfile

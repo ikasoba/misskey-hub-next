@@ -1,9 +1,7 @@
 {
 	summary: '認識している他のサーバーの一覧を取得します。',
 	description: '認識している他のサーバーの一覧を取得します。各パラメータを指定しない場合、そのパラメータでの絞り込みは行われません。複数のパラメータを指定すると、それらの条件をすべて満たすサーバーを検索します。',
-	tags: [
-		'federation',
-	],
+	tags: ['federation'],
 	requireCredential: false,
 	req: {
 		type: 'object',

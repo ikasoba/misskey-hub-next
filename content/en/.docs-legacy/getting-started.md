@@ -1,4 +1,5 @@
 # Getting Started with Misskey
+
 Misskey is a program and a project.
 The server running Misskey, which is open to the public on the Internet, is called an **instance**.
 To use Misskey, you need to create an account in one of the instances and use that instance.
@@ -17,7 +18,9 @@ Misskey's federation is based on an open common standard called ActivityPub, and
 :::
 
 ## Choosing an Instance
+
 ### Instance Themes
+
 Some instances may have a specific theme, for example, "I like certain stuff and activities".
 It is recommended to find an instance of the theme that suits you best.
 

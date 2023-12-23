@@ -40,12 +40,7 @@
 			:height="height"
 			:viewBox="`0 0 ${width} ${height}`"
 			xmlns="http://www.w3.org/2000/svg"
-			style="
-				position: absolute;
-				top: -32px;
-				left: -32px;
-				pointer-events: none;
-			"
+			style="position: absolute; top: -32px; left: -32px; pointer-events: none"
 		>
 			<path
 				style="transform-origin: center; transform-box: fill-box"
@@ -78,13 +73,13 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, onUnmounted, ref, shallowRef } from "vue";
+import { onMounted, onUnmounted, ref, shallowRef } from 'vue';
 
 const particles = ref([]);
 const el = shallowRef<HTMLElement>();
 const width = ref(0);
 const height = ref(0);
-const colors = ["#FF1493", "#00FFFF", "#FFE202", "#FFE202", "#FFE202"];
+const colors = ['#FF1493', '#00FFFF', '#FFE202', '#FFE202', '#FFE202'];
 let stop = false;
 let ro: ResizeObserver | undefined;
 
@@ -109,14 +104,15 @@ onMounted(() => {
 		};
 		particles.value.push(particle);
 		window.setTimeout(() => {
-			particles.value = particles.value.filter(
-				(x) => x.id !== particle.id
-			);
+			particles.value = particles.value.filter((x) => x.id !== particle.id);
 		}, particle.dur - 100);
 
-		window.setTimeout(() => {
-			add();
-		}, 500 + Math.random() * 500);
+		window.setTimeout(
+			() => {
+				add();
+			},
+			500 + Math.random() * 500,
+		);
 	};
 	add();
 });

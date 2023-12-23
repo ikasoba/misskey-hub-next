@@ -26,18 +26,18 @@ Misskey pozwala tworzyć spesonalizowane ośi czasu zgodnie z twoimi wymaganiami
 
 ## Porównanie
 
-| Źródło             |            |        |   Oś czasu |       |            |
-|-----------------------|------------|--------|---------|------------|------------|
-| Użytkownik                  | Widoczność | Domowy   | Lokalny    | Społecznościowy     | Globalny |
-| Lokalna (Obserwujący)     | Publiczny     | ✔      | ✔        | ✔          | ✔          |
-|                       | Domowy       | ✔      |          | ✔          |            |
-|                       | Obserwujący  | ✔      |          | ✔          |            |
-| Zdalny (Obserwujący)    | Publiczny     | ✔      |          | ✔          | ✔          |
-|                       | Domowy       | ✔      |          | ✔          |            |
-|                       | Obserwujący  | ✔      |          | ✔          |            |
-| lokalny (Nie obserwujący) | Publiczni     |        | ✔        | ✔          | ✔          |
-|                       | Domowy       |        |          |            |            |
-|                       | Obserwujący  |        |          |            |            |
-| Zdalny (Nie obserwujący)| Publiczni     |        |          |            | ✔          |
-|                       | Domowy      |        |          |            |            |
-|                       | Obserwujący  |        |          |            |            |
+| Źródło                    |             |        | Oś czasu |                 |          |
+| ------------------------- | ----------- | ------ | -------- | --------------- | -------- |
+| Użytkownik                | Widoczność  | Domowy | Lokalny  | Społecznościowy | Globalny |
+| Lokalna (Obserwujący)     | Publiczny   | ✔     | ✔       | ✔              | ✔       |
+|                           | Domowy      | ✔     |          | ✔              |          |
+|                           | Obserwujący | ✔     |          | ✔              |          |
+| Zdalny (Obserwujący)      | Publiczny   | ✔     |          | ✔              | ✔       |
+|                           | Domowy      | ✔     |          | ✔              |          |
+|                           | Obserwujący | ✔     |          | ✔              |          |
+| lokalny (Nie obserwujący) | Publiczni   |        | ✔       | ✔              | ✔       |
+|                           | Domowy      |        |          |                 |          |
+|                           | Obserwujący |        |          |                 |          |
+| Zdalny (Nie obserwujący)  | Publiczni   |        |          |                 | ✔       |
+|                           | Domowy      |        |          |                 |          |
+|                           | Obserwujący |        |          |                 |          |

@@ -1,9 +1,7 @@
 {
 	summary: 'ファイルを検索します。',
 	description: 'ログイン中のユーザーのドライブから、ファイルを検索します。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -20,9 +18,7 @@
 				description: '親フォルダのid。null（デフォルト）であれば、ルート階層にあるファイルを検索します。',
 			},
 		},
-		required: [
-			'name',
-		],
+		required: ['name'],
 	},
 	res: {
 		type: 'array',

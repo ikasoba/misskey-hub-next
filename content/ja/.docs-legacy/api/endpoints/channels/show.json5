@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'channels',
-	],
+	tags: ['channels'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -13,9 +11,7 @@
 				format: 'misskey:id',
 			},
 		},
-		required: [
-			'channelId',
-		],
+		required: ['channelId'],
 	},
 	res: {
 		type: 'object',

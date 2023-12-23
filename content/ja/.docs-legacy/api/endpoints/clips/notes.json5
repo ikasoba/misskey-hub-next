@@ -1,9 +1,7 @@
 {
 	summary: 'クリップに含まれるノートを取得します。',
 	description: 'クリップに含まれるノートを取得します。非公開のクリップは、作成したユーザーのみが閲覧できます。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -31,9 +29,7 @@
 				description: '指定すると、idがその値より小さいノートを返します。',
 			},
 		},
-		required: [
-			'clipId',
-		],
+		required: ['clipId'],
 	},
 	res: {
 		type: 'array',

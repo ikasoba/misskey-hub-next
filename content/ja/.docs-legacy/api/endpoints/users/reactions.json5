@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザーがつけたリアクションを取得します。',
 	description: 'ユーザーがつけたリアクションを取得します。',
-	tags: [
-		'users',
-	],
+	tags: ['users'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -39,9 +37,7 @@
 				description: 'エポック秒で日時を指定すると、その日時より前に作成されたリアクションを返します。',
 			},
 		},
-		required: [
-			'userId',
-		],
+		required: ['userId'],
 	},
 	res: {
 		type: 'array',

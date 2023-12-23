@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザーのミュートを解除します。',
 	description: 'ユーザーのミュートを解除します。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ミュートを解除するユーザーのid。',
 			},
 		},
-		required: [
-			'userId',
-		],
+		required: ['userId'],
 	},
 	res: {},
 	errors: {

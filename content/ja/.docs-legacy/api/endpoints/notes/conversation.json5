@@ -1,9 +1,7 @@
 {
 	summary: '関連するノートを取得します。',
 	description: '関連するノートを取得します。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -26,9 +24,7 @@
 				description: '結果の先頭offset個をスキップします。',
 			},
 		},
-		required: [
-			'noteId',
-		],
+		required: ['noteId'],
 	},
 	res: {
 		type: 'array',

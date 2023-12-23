@@ -1,9 +1,7 @@
 {
 	summary: 'ファイルのURLを指定して、ドライブにアップロードします。',
 	description: 'ファイルのURLを指定して、ログイン中のユーザのドライブにアップロードします。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -43,9 +41,7 @@
 				description: 'trueにすると、同じハッシュ値を持つファイルがすでに存在している場合でも、ファイルをアップロードします。',
 			},
 		},
-		required: [
-			'url',
-		],
+		required: ['url'],
 	},
 	res: {},
 	errors: {},

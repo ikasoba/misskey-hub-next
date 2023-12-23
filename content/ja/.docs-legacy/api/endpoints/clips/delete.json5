@@ -1,9 +1,7 @@
 {
 	summary: 'クリップを削除します。',
 	description: 'ログイン中のユーザーが作成したクリップを削除します。',
-	tags: [
-		'clips',
-	],
+	tags: ['clips'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'クリップのid。',
 			},
 		},
-		required: [
-			'clipId',
-		],
+		required: ['clipId'],
 	},
 	res: {},
 	errors: {

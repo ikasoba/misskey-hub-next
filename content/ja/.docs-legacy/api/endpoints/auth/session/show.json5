@@ -1,9 +1,7 @@
 {
 	summary: 'セッションの情報を取得します。',
 	description: 'セッションの情報を取得します。',
-	tags: [
-		'auth',
-	],
+	tags: ['auth'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -13,9 +11,7 @@
 				description: 'セッションのトークン。',
 			},
 		},
-		required: [
-			'token',
-		],
+		required: ['token'],
 	},
 	res: {
 		type: 'object',
@@ -44,11 +40,7 @@
 				description: 'セッションのトークン。',
 			},
 		},
-		required: [
-			'id',
-			'app',
-			'token',
-		],
+		required: ['id', 'app', 'token'],
 	},
 	errors: {
 		'bd72c97d-eba7-4adb-a467-f171b8847250': {

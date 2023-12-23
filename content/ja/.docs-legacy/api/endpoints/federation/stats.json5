@@ -1,9 +1,7 @@
 {
 	summary: 'サーバー・連合の統計を取得します。',
 	description: 'サーバー・連合の統計を取得します。',
-	tags: [
-		'federation',
-	],
+	tags: ['federation'],
 	requireCredential: false,
 	req: {
 		type: 'object',

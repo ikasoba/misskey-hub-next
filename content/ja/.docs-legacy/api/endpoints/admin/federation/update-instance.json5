@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -15,10 +13,7 @@
 				type: 'boolean',
 			},
 		},
-		required: [
-			'host',
-			'isSuspended',
-		],
+		required: ['host', 'isSuspended'],
 	},
 	res: {},
 	errors: {},

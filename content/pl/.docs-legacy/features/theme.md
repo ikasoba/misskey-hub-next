@@ -11,7 +11,7 @@ Ustawienia > Motywy
 Motywy są pisane za pomocą JSON5.
 Motywy mają obiekty tak jak ten przykład:
 
-``` js
+```js
 {
  id: '17587283-dd92-4a2c-a22c-be0637c9e22a',
 
@@ -37,14 +37,14 @@ Motywy mają obiekty tak jak ten przykład:
 
 ```
 
-* `id` ... ID Motywu. UUID jest rekomendowane.
-* `name` ... Nazwa motywu
-* `author` ... Autor motywu
-* `desc` ... Opis motywu (Object)
-* `base` ... tryb jasny czy ciemny?
-  * Użyj `light` dla jasnego i `dark` dla ciemnego trybu.
-  * Motyw używa bazy wyspecyfikowanej.
-* `props` ... Definicje stylu motywu. Wytłumacznone w następujących punktach.
+- `id` ... ID Motywu. UUID jest rekomendowane.
+- `name` ... Nazwa motywu
+- `author` ... Autor motywu
+- `desc` ... Opis motywu (Object)
+- `base` ... tryb jasny czy ciemny?
+  - Użyj `light` dla jasnego i `dark` dla ciemnego trybu.
+  - Motyw używa bazy wyspecyfikowanej.
+- `props` ... Definicje stylu motywu. Wytłumacznone w następujących punktach.
 
 ### Definicje stylów motywu
 
@@ -55,24 +55,24 @@ Bazowy motyw to [_light.json5] jeśli `base` motywu jest `light` i [_dark.json5]
 Jeśli nie ma wartości `props` nazwanej `panel` w motywie, to będzie użyta wartość `panel` z bazowego motywu.
 
 [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
-[_dark.json5]:  https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
+[_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
 #### Składnia wartości
 
-* Kolory w formacie `#rrggbb`
-  * Na przykład: `#00ff00`
-* Kolory w formacie  `rgb(r, g, b)`
-  * Na przykład: `rgb(0, 255, 0)`
-* kolory w wartościach alfa/przezroczystość w formacie `rgb(r, g, b, a)`
-  * przykład: `rgba(0, 255, 0, 0.5)`
-* Inne wartości
-  * `@{key name}` Nazwa wartości z innego klucza. Zamień `{key name}` z nazwą klucza do którego chcesz nawiązać.
-  * example: `@panel`
-* Zmienne:
-  * `${constant name}` nawiązuje do stałej. Zamień `{constant name}` z nawą stałej do której chcesz nawiązać.
-  * przykład: `$main`
-* Funkcje:
-  * `:{nazwa funkcji}<{argumenty}}<{kod}`
+- Kolory w formacie `#rrggbb`
+  - Na przykład: `#00ff00`
+- Kolory w formacie `rgb(r, g, b)`
+  - Na przykład: `rgb(0, 255, 0)`
+- kolory w wartościach alfa/przezroczystość w formacie `rgb(r, g, b, a)`
+  - przykład: `rgba(0, 255, 0, 0.5)`
+- Inne wartości
+  - `@{key name}` Nazwa wartości z innego klucza. Zamień `{key name}` z nazwą klucza do którego chcesz nawiązać.
+  - example: `@panel`
+- Zmienne:
+  - `${constant name}` nawiązuje do stałej. Zamień `{constant name}` z nawą stałej do której chcesz nawiązać.
+  - przykład: `$main`
+- Funkcje:
+  - `:{nazwa funkcji}<{argumenty}}<{kod}`
 
 #### Stałe
 

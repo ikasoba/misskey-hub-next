@@ -1,9 +1,7 @@
 {
 	summary: 'Webhookの設定を更新します。',
 	description: 'Webhookの設定を更新します。',
-	tags: [
-		'webhooks',
-	],
+	tags: ['webhooks'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -53,14 +51,7 @@
 				description: 'trueにすると、Webhookが有効になります。falseにすると、無効になります。Webhookを削除するには、 i/webhooks/delete エンドポイントを使用してください。',
 			},
 		},
-		required: [
-			'webhookId',
-			'name',
-			'url',
-			'secret',
-			'on',
-			'active',
-		],
+		required: ['webhookId', 'name', 'url', 'secret', 'on', 'active'],
 	},
 	res: {},
 	errors: {

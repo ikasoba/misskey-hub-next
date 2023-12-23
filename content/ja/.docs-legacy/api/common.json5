@@ -21,7 +21,7 @@
 				},
 				onlineStatus: {
 					type: 'string',
-					enum: ['online', 'active', 'offline', 'unknown',],
+					enum: ['online', 'active', 'offline', 'unknown'],
 				},
 				avatarUrl: {
 					type: 'string',
@@ -56,7 +56,7 @@
 				},
 				visibility: {
 					type: 'string',
-					enum: ['public', 'home', 'followers', 'specified',],
+					enum: ['public', 'home', 'followers', 'specified'],
 				},
 			},
 		},

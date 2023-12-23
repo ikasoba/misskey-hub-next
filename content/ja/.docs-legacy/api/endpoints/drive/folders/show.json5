@@ -1,9 +1,7 @@
 {
 	summary: 'フォルダーを取得します。',
 	description: 'ログイン中のユーザのドライブにあるフォルダーを取得します。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'フォルダーのid。',
 			},
 		},
-		required: [
-			'folderId',
-		],
+		required: ['folderId'],
 	},
 	res: {
 		type: 'object',

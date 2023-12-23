@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'gallery',
-	],
+	tags: ['gallery'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -31,10 +29,7 @@
 				default: false,
 			},
 		},
-		required: [
-			'title',
-			'fileIds',
-		],
+		required: ['title', 'fileIds'],
 	},
 	res: {
 		type: 'object',

@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'messaging',
-	],
+	tags: ['messaging'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -13,9 +11,7 @@
 				format: 'misskey:id',
 			},
 		},
-		required: [
-			'messageId',
-		],
+		required: ['messageId'],
 	},
 	res: {},
 	errors: {

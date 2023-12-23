@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'app',
-	],
+	tags: ['app'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -26,11 +24,7 @@
 				nullable: true,
 			},
 		},
-		required: [
-			'name',
-			'description',
-			'permission',
-		],
+		required: ['name', 'description', 'permission'],
 	},
 	res: {
 		type: 'object',

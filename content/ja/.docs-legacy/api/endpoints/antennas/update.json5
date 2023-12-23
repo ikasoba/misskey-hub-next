@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'antennas',
-	],
+	tags: ['antennas'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -19,12 +17,7 @@
 			},
 			src: {
 				type: 'string',
-				enum: [
-					'home',
-					'all',
-					'users',
-					'list',
-				],
+				enum: ['home', 'all', 'users', 'list'],
 			},
 			userListId: {
 				type: 'string',

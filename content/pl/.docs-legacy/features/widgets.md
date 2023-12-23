@@ -12,6 +12,7 @@ Kiedy zamkniesz edytor układu widżetów, możesz również skonfigurować usta
 ### Powiadomienia
 
 Pokazuje powiadomienia związane z Twoim kontem.
+
 ### Oś czasu
 
 Wyświetlaj oś czasu. Wybierz jedną z standardowych ośi czasu,albo dowolnej personalizowanej.

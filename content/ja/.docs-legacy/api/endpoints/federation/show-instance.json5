@@ -1,9 +1,7 @@
 {
 	summary: 'サーバーの詳細を取得します。',
 	description: 'サーバーの詳細を取得します。',
-	tags: [
-		'federation',
-	],
+	tags: ['federation'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -13,9 +11,7 @@
 				description: 'サーバーのホスト名。',
 			},
 		},
-		required: [
-			'host',
-		],
+		required: ['host'],
 	},
 	res: {
 		oneOf: [

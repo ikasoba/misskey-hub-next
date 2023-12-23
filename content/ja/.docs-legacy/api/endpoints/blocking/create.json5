@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザーをブロックします。',
 	description: 'ユーザーをブロックします。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ブロックするユーザーのid。',
 			},
 		},
-		required: [
-			'userId',
-		],
+		required: ['userId'],
 	},
 	res: {
 		type: 'object',

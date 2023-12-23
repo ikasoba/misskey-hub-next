@@ -1,9 +1,7 @@
 {
 	summary: 'ファイルを取得します。',
 	description: 'ファイルを取得します。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -16,9 +14,7 @@
 						description: 'ファイルのid。',
 					},
 				},
-				required: [
-					'fileId',
-				],
+				required: ['fileId'],
 			},
 			{
 				properties: {
@@ -27,9 +23,7 @@
 						description: 'ファイルのURL。サムネイルやwebpublicのURLからも元ファイルを取得できます。',
 					},
 				},
-				required: [
-					'url',
-				],
+				required: ['url'],
 			},
 		],
 	},

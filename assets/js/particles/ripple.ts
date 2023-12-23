@@ -28,7 +28,10 @@ export class Ripple {
 
 		this.array = config.array;
 		this.group = config.group;
-		this.sphere = new THREE.Sphere(new THREE.Vector3(config.x, config.y, config.z), 0);
+		this.sphere = new THREE.Sphere(
+			new THREE.Vector3(config.x, config.y, config.z),
+			0,
+		);
 		this.strength = config.strength ? config.strength : Calc.rand(7, 15);
 		this.threshold = Calc.rand(5, 20);
 		this.growth = Calc.rand(0.2, 0.5);
@@ -37,7 +40,11 @@ export class Ripple {
 		this.influence = new THREE.Vector3();
 		const points = [];
 		const resolution = 64;
-		for (let j = 0; j < (Math.PI * 2) + ((Math.PI) / resolution); j += (2 * Math.PI) / resolution) {
+		for (
+			let j = 0;
+			j < Math.PI * 2 + Math.PI / resolution;
+			j += (2 * Math.PI) / resolution
+		) {
 			points.push(Math.cos(j), Math.sin(j), 0);
 		}
 		this.geometry = new MeshLine();
@@ -63,9 +70,14 @@ export class Ripple {
 		this.influence.set(0, 0, 0);
 		let distance = this.sphere.distanceToPoint(vec);
 
-		if(distance <= this.threshold ) {
-			let ease = Ease.inOutSine(this.threshold - distance, 0, 1, this.threshold);
-			let power = (this.strength * ease * this.life);
+		if (distance <= this.threshold) {
+			let ease = Ease.inOutSine(
+				this.threshold - distance,
+				0,
+				1,
+				this.threshold,
+			);
+			let power = this.strength * ease * this.life;
 			this.influence.addVectors(vec, this.sphere.center).multiplyScalar(power);
 		}
 
@@ -73,7 +85,7 @@ export class Ripple {
 	}
 
 	update(i) {
-		this.sphere.radius += (this.growth * this.life) * this.loader.deltaTimeNormal;
+		this.sphere.radius += this.growth * this.life * this.loader.deltaTimeNormal;
 		this.life -= this.decay * this.loader.deltaTimeNormal;
 
 		this.mesh.position.y = (1 - this.life) * -2;
@@ -81,7 +93,7 @@ export class Ripple {
 		this.mesh.scale.set(newScale, newScale, newScale);
 		this.mesh.material.opacity = this.life / 3;
 
-		if(this.life <= 0) {
+		if (this.life <= 0) {
 			this.destroy(i);
 		}
 	}

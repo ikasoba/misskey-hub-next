@@ -1,4 +1,5 @@
 # Débuter avec Misskey
+
 Misskey est à la fois un logiciel et un projet.
 Le serveur utilisant Misskey, et accessible au public sur Internet, est appelé une **instance**.
 Pour utiliser Misskey, vous devez créer un compte sur une instance et vous y connecter.
@@ -17,7 +18,9 @@ La fédération de Misskey est pasée sur le standard libre ActivityPub, et est 
 :::
 
 ## Choisir une instance
+
 ### Instance thématique
+
 Certaines instances ont des thèmes spécifiques, par autour d’activités.
 Il est recommandé de choisir une instance dont le thème vous correspond.
 

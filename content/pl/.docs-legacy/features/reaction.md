@@ -18,7 +18,7 @@ Zazwyczaj "Like" z ActivityPub jest implementowany jako polubienie ale to już z
 Z racji na to że Misskey nie posiada lajków, "Polubienie" z zdalnej instancji będzie wyświetlone jako reakcja '👍' (albo w nowszych wersjach ❤ - to już zależy od administratora instacji).
 
 :::Wskazówka
-Administracja instancji może zmienić domyślną reakcję na "Like" w ustawieniach. Więcej o tym  [tutaj](../admin/default-reaction.md).
+Administracja instancji może zmienić domyślną reakcję na "Like" w ustawieniach. Więcej o tym [tutaj](../admin/default-reaction.md).
 :::
 
 ## Zobacz listę wszytkich reakcji

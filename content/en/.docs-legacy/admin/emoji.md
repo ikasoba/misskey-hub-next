@@ -74,6 +74,7 @@ class Emoji {
 The fields of `Meta` are currently not used or checked when importing emoji, except for the `emojis` field.
 
 For each `Emoji`:
+
 - `downloaded`: should always be true. If the field is missing or not truthy, the emoji will not be imported.
 - `fileName`: name of the image file inside the packed file.
 - `emoji`: data associated with the emoji as it was stored in the database. Currently most of these fields are

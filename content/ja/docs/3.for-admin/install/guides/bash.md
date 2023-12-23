@@ -10,9 +10,11 @@ Misskeyを簡単にインストールするためのシェルスクリプトが�
 [**English version**](./README.en.md)
 
 ## ライセンス
+
 [MIT License](./LICENSE)
 
 ## 準備するもの
+
 1. ドメイン
 2. Ubuntuがインストールされたサーバー
 3. Cloudflareアカウント（推奨）
@@ -24,6 +26,7 @@ Misskeyを簡単にインストールするためのシェルスクリプトが�
 Let's Encryptの認証を試行できる回数が少ないので、サーバーのネットワークやDNSの設定を十分確認してからインストールを開始してください。
 
 ## Cloudflareの設定
+
 Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。  
 ネームサーバーの適用には最大で3日程度かかる場合があります。
 
@@ -33,11 +36,14 @@ Cloudflareを使う場合、Cloudflareのドメインの設定を完了してか
 - SSL/TLS設定にて、暗号化モードを「フル」に設定してください。
 
 ## 操作
+
 ### 1. SSH
+
 サーバーにSSH接続します。  
 （サーバーのデスクトップを開いている方はシェルを開きましょう。）
 
 ### 2. 環境を最新にする
+
 すべてのパッケージを最新にし、再起動します。
 
 ```
@@ -45,6 +51,7 @@ sudo apt update; sudo apt full-upgrade -y; sudo reboot
 ```
 
 ### 3. インストールをはじめる
+
 SSHを接続しなおして、Misskeyのインストールを始めましょう。
 
 ただ、インストール前に[Tips](#tips)を読むことを強くお勧めします。
@@ -56,6 +63,7 @@ wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/ubuntu.sh -
 example.comは自分のドメインに置き換えてください。
 
 ### 4. アップデートする
+
 アップデートのためのスクリプトもあります。
 
 アップデートスクリプトは、環境のアップデートは行いません。CHANGELOG（日本語）および[GitHubのリリース一覧（英語）](https://github.com/joinmisskey/bash-install/releases)を参考に、適宜マイグレーション操作を行なってください。
@@ -87,6 +95,7 @@ sudo bash update.sh
 iptablesを使うようにしてください。
 
 ## Issues & PRs Welcome
+
 上記の環境で動作しない場合、バグの可能性があります。インストールの際に指定された条件を記載の上、GitHubのIssue機能にてご報告いただければ幸いです。
 
 上記以外の環境についてのサポートは難しいですが、状況を詳しくお教えいただければ解決できる可能性があります。
@@ -94,9 +103,11 @@ iptablesを使うようにしてください。
 機能の提案についても歓迎いたします。
 
 # Tips
+
 選択肢の選び方や仕様についてなど。
 
 ## Systemd or Docker?
+
 v1から、インストールメソッドにsystemdとDockerとを選べるようにしました。
 
 Dockerと言っても、**MisskeyだけをDockerで実行**し、RedisやPostgresなどはホストで直接実行します。  
@@ -117,14 +128,17 @@ systemdは、Docker Hubにイメージを上げるまでもないものの、フ
 3. Dockerビルド
 
 ## nginxを使うかどうか
+
 サーバー1台でMisskeyを構築する場合は、nginxの使用をお勧めします。
 
 ロードバランサーを設置する場合にはnginxをインストールせず、[Misskeyのnginx設定](../resources/nginx/)を参考にロードバランサーを設定するのがよいと思います。
 
 ## Add more swaps!
+
 スワップを設定している場合、メモリが合計で3GB以上でなければスクリプトが動作しないようになっています。
 
 ## 途中で失敗してまたスクリプトを実行する場合
+
 万が一途中で失敗してもう一度スクリプトを動作させる場合、次のことに注意してください。
 
 - RedisやPostgresのインストールが終わっている場合、「install locally」はNoにしてください。  
@@ -132,27 +146,33 @@ systemdは、Docker Hubにイメージを上げるまでもないものの、フ
   ユーザー名やパスワードは、前回実行した際に指定したものを入力します。
 
 ## .envファイルについて
+
 インストールスクリプトは、2つの.envファイルを作成します。  
 アップデートの際に使用します。
 
 ### /root/.misskey.env
+
 misskeyを実行するユーザーを覚えておくために必要です。
 
 ### /home/(misskeyユーザー)/.misskey.env
+
 systemdの場合に生成されます。  
 主にディレクトリを覚えておくのに使用します。
 
 ### /home/(misskeyユーザー)/.misskey-docker.env
+
 Dockerの場合に生成されます。  
 実行されているコンテナとイメージの番号を保存しています。  
 コンテナの番号はアップデートの際に更新されます。古いイメージは削除されます。
 
 ## 自分で管理する
+
 インストール後、構成を変更する際に役立つかもしれないメモです。
 
 "example.com"を自分のドメインに置き換えて読んでください。
 
 ### Misskeyディレクトリ
+
 Misskeyのソースは`/home/ユーザー/ディレクトリ`としてcloneされます。  
 （ユーザー、ディレクトリの初期値はともにmisskeyです。）
 
@@ -170,6 +190,7 @@ exit
 ```
 
 ### systemd
+
 systemdのプロセス名はexample.comです。  
 たとえば再起動するには次のようにします。
 
@@ -186,6 +207,7 @@ journalctl -t example.com
 設定ファイルは`/etc/systemd/system/example.com.service`として保存されています。
 
 ### Docker
+
 DockerはMisskeyユーザーでrootless実行されています。
 
 sudo でMisskeyユーザーに入るときは、`XDG_RUNTIME_DIR`と`DOCKER_HOST`を変更する必要があります。
@@ -215,16 +237,19 @@ sudo -u ユーザー XDG_RUNTIME_DIR=/run/user/$(id -u ユーザー) DOCKER_HOST
 ```
 
 ### nginx
+
 nginxの設定は`/etc/nginx/conf.d/example.com.conf`として保存されています。
 
 ### Redis
+
 requirepassとbindを`/etc/redis/misskey.conf`で設定しています。
 
 ## Q. アップデート後に502でアクセスできない
+
 Dockerでは、起動後にマイグレーションをするため、すぐにアクセスできません。  
 マイグレーションが終わっているかどうか確認してみてください。
 
-systemdの場合では、pnpm installに失敗している可能性があります。  
+systemdの場合では、pnpm installに失敗している可能性があります。
 
 Misskeyディレクトリで次の内容を実行し、もう一度アップデートを実行してみてください。
 
@@ -235,5 +260,6 @@ pnpm run clean-all
 journalctlでログを確認すると、たいていre2が云々という記述が見当たります。
 
 ## Q. 同じサーバーにもう1つMisskeyを建てたい
+
 スクリプトは同じサーバーに追加でMisskeyをインストールすることは想定していません。  
 幾つかの設定が上書きされるか、途中でエラーになってしまうでしょう。

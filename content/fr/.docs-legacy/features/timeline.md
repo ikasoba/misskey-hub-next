@@ -27,18 +27,18 @@ Une des fonctions Misskey est de créer ses propres fils. Voir [listes](./list.m
 
 ## Comparaison
 
-| Source                |            |           |   Fil    |            |            |
-|-----------------------|------------|-----------|----------|------------|------------|
-| Membre                | Visibilité | Accueil   | Local    | Social     | Global     |
-| Local (Abonnés)       | Public     | ✔         | ✔        | ✔          | ✔          |
-|                       | Accueil    | ✔         |          | ✔          |            |
-|                       | Abonnés    | ✔         |          | ✔          |            |
-| Distant (Abonnés)     | Public     | ✔         |          | ✔          | ✔          |
-|                       | Accueil    | ✔         |          | ✔          |            |
-|                       | Abonnés    | ✔         |          | ✔          |            |
-| Local (Non-Abonnés)   | Public     |           | ✔        | ✔          | ✔          |
-|                       | Accueil    |           |          |            |            |
-|                       | Abonnés    |           |          |            |            |
-| Distant (Non-Abonnés) | Public     |           |          |            | ✔          |
-|                       | Accueil    |           |          |            |            |
-|                       | Abonnés    |           |          |            |            |
+| Source                |            |         | Fil   |        |        |
+| --------------------- | ---------- | ------- | ----- | ------ | ------ |
+| Membre                | Visibilité | Accueil | Local | Social | Global |
+| Local (Abonnés)       | Public     | ✔      | ✔    | ✔     | ✔     |
+|                       | Accueil    | ✔      |       | ✔     |        |
+|                       | Abonnés    | ✔      |       | ✔     |        |
+| Distant (Abonnés)     | Public     | ✔      |       | ✔     | ✔     |
+|                       | Accueil    | ✔      |       | ✔     |        |
+|                       | Abonnés    | ✔      |       | ✔     |        |
+| Local (Non-Abonnés)   | Public     |         | ✔    | ✔     | ✔     |
+|                       | Accueil    |         |       |        |        |
+|                       | Abonnés    |         |       |        |        |
+| Distant (Non-Abonnés) | Public     |         |       |        | ✔     |
+|                       | Accueil    |         |       |        |        |
+|                       | Abonnés    |         |       |        |        |

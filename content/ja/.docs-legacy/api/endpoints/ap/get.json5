@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'federation',
-	],
+	tags: ['federation'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -12,9 +10,7 @@
 				type: 'string',
 			},
 		},
-		required: [
-			'uri',
-		],
+		required: ['uri'],
 	},
 	res: {
 		type: 'object',

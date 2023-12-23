@@ -1,9 +1,7 @@
 {
 	summary: 'トレンドにあるハッシュタグを取得します。',
 	description: 'トレンドにあるハッシュタグを取得します。',
-	tags: [
-		'hashtags',
-	],
+	tags: ['hashtags'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -43,11 +41,7 @@
 					description: 'ハッシュタグを過去1時間に使用したユーザー数。1時間ごとに更新されます。',
 				},
 			},
-			required: [
-				'tag',
-				'chart',
-				'usersCount',
-			],
+			required: ['tag', 'chart', 'usersCount'],
 		},
 	},
 	errors: {},

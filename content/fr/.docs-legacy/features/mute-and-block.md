@@ -15,6 +15,7 @@ Pensez à signaler à la modération toute personne qui violerait les conditions
 Dans Misskey Web, vous pouvez voir une liste des personnes que vous avez bloqué ou ignoré dans la section éponyme des paramètres.
 
 ## Ignorer
+
 En ignorant une personne, n’apparaîtront plus sur Misskey :
 
 - ses publications (et leurs réponses) dans votre fil et résultats de recherche ;
@@ -29,6 +30,7 @@ Ces personnes ne sauront pas que vous les ignorez.
 :::
 
 ## Bloquer
+
 Si vous bloquez une personne, elle ne pourra plus voir votre activité et ne pourra plus :
 
 - vous suivre ;

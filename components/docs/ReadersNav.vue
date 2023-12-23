@@ -9,25 +9,27 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-	sectionId: "forUsers" | "forAdmin" | "forDevelopers";
+	sectionId: 'forUsers' | 'forAdmin' | 'forDevelopers';
 }>();
 
 const { locale } = useI18n();
 
 const convertToKebabCase = (str: string): string => {
-	if (typeof str !== "string") return str;
+	if (typeof str !== 'string') return str;
 
 	str = str.replace(/^ *?[A-Z]/, function (allStr) {
 		return allStr.toLowerCase();
 	});
-	str = str.replace(/_/g, "-");
+	str = str.replace(/_/g, '-');
 	str = str.replace(/ *?[A-Z]/g, function (allStr, i) {
-		return "-" + allStr.replace(/\s/g, "").toLowerCase();
+		return '-' + allStr.replace(/\s/g, '').toLowerCase();
 	});
 	return str;
 };
 
-const basePath = `/${locale.value}/docs/${convertToKebabCase(props.sectionId)}/`;
+const basePath = `/${locale.value}/docs/${convertToKebabCase(
+	props.sectionId,
+)}/`;
 </script>
 
 <style scoped></style>

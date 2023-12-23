@@ -1,9 +1,7 @@
 {
 	summary: 'ファイルが添付されているノートを取得します。',
 	description: 'ログイン中のユーザのドライブにあるファイルが添付されているノートを取得します。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ファイルのid。',
 			},
 		},
-		required: [
-			'fileId',
-		],
+		required: ['fileId'],
 	},
 	res: {
 		type: 'array',

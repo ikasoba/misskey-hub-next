@@ -1,10 +1,11 @@
 # Nginx 설정
+
 1. `/etc/nginx/conf.d/misskey.conf` 또는 `/etc/nginx/sites-available/misskey.conf` 파일을 만들고 다음 예시를 복사해 주세요.\
    (파일 이름이 굳이 "misskey"일 필요는 없습니다.)
 2. 다음과 같이 수정해 주세요:
    1. example.tld를 미리 준비해 둔 도메인으로 변경해주세요.\
-     `ssl_certificate`와 `ssl_certificate_key`는 Let's Encrypt로부터 받은 인증서 경로여야 합니다.
-	 2. Cloudflare와 같은 CDN을 활용하고 있다면, "If it's behind another reverse proxy or CDN, remove the following."으로부터 4줄을 지워주세요.
+      `ssl_certificate`와 `ssl_certificate_key`는 Let's Encrypt로부터 받은 인증서 경로여야 합니다.
+   2. Cloudflare와 같은 CDN을 활용하고 있다면, "If it's behind another reverse proxy or CDN, remove the following."으로부터 4줄을 지워주세요.
 3. `/etc/nginx/sites-available/misskey.conf` 파일을 만들었다면, symlink로 `/etc/nginx/sites-enabled/misskey.conf`에 연결해주세요.\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
 4. `sudo nginx -t`를 실행해 설정 파일이 정상적으로 로드되는지 확인해주세요.

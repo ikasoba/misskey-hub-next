@@ -1,16 +1,18 @@
 # Configuration Nginx
+
 1. Créez `/etc/nginx/conf.d/misskey.conf` ou `/etc/nginx/sites-available/misskey.conf` et y insérer l’exemple ci-dessous.\
    (Le nom du fichier peut être modifié.)
 2. Faites les modifications suivantes :
    1. Remplacez example.tld avec votre nom de domaine ;\
-     `ssl_certificate` and `ssl_certificate_key` should be the path to the certificate obtained from Let's Encrypt.
-	 2. Si vous utilisez un CDN, comme Cloudflare, retirez les 4 lignes à partir de « If it's behind another reverse proxy or CDN, remove the following » ;
+      `ssl_certificate` and `ssl_certificate_key` should be the path to the certificate obtained from Let's Encrypt.
+   2. Si vous utilisez un CDN, comme Cloudflare, retirez les 4 lignes à partir de « If it's behind another reverse proxy or CDN, remove the following » ;
 3. Si vous créez `/etc/nginx/sites-available/misskey.conf`, pensez à ajouter un symlink `/etc/nginx/sites-enabled/misskey.conf`.\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
 4. Lancez `sudo nginx -t` pour vérifier le bon chargement du fichier de configuration ;
 5. Lancez `sudo systemctl restart nginx` pour redémarrer nginx.
 
 # Exemple de configuration Nginx
+
 ```nginx
 # For WebSocket
 map $http_upgrade $connection_upgrade {

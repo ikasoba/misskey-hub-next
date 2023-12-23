@@ -1,9 +1,7 @@
 {
 	summary: '指定されたハッシュタグが付けられたノートを取得します。',
 	description: '指定されたハッシュタグが付けられたノートを取得します。複数のハッシュタグを組み合わせた検索条件を設定できます。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -58,9 +56,7 @@
 						description: '検索対象のハッシュタグ。ハッシュ（#）自身は含めません。',
 					},
 				},
-				required: [
-					'tag',
-				],
+				required: ['tag'],
 			},
 			{
 				properties: {
@@ -78,9 +74,7 @@
 						minItems: 1,
 					},
 				},
-				required: [
-					'query',
-				],
+				required: ['query'],
 			},
 		],
 	},

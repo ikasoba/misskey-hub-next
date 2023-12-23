@@ -1,9 +1,7 @@
 {
 	summary: 'ハイライトされたノートを取得します。',
 	description: 'ハイライトされたノートを取得します。結果はノートの作成時刻の降順にソートされます（最新のものが先頭）。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: false,
 	req: {
 		type: 'object',

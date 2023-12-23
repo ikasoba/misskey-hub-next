@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'users',
-	],
+	tags: ['users'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -24,9 +22,7 @@
 				],
 			},
 		},
-		required: [
-			'userId',
-		],
+		required: ['userId'],
 	},
 	res: {
 		optional: false,

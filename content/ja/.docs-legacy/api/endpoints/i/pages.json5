@@ -1,9 +1,7 @@
 {
 	summary: 'ページの一覧を取得します。',
 	description: 'ログイン中のユーザーが作成したページの一覧を取得します。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',

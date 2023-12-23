@@ -40,6 +40,7 @@ VuePressよりは、今はどちらかというと[VitePress](https://vitepress.
 - [Nuxt Color Mode](https://color-mode.nuxtjs.org/)
 
 ### その他
+
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [ufo](https://github.com/unjs/ufo) - URLのパースなどができるライブラリ。超便利
 - [AiScript VSCode](https://github.com/aiscript-dev/aiscript-vscode) - AiScriptのコードハイライトに使用
@@ -202,7 +203,6 @@ for (let i, 100) {
 ```
 
 ### 藍
-
 
 :::fukidashi{chara="doya_ai" charaName="藍"}
 Misskey Hub Nextでは、わたし・藍も色々なところにいます！  

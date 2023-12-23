@@ -3,6 +3,7 @@ description: 'MFM est un langage de balise spécifique à Misskey.'
 ---
 
 # MFM
+
 MFM, abréviation de Misskey Flavoured Markdown, est un langage de balise spécifique à Misskey.
 
 :::tip
@@ -10,13 +11,16 @@ Une partie de la syntaxe est compatible avec Markdown.
 :::
 
 ## Exemples de champs prenant en charge le MFM
+
 - corps de note ;
 - avertissement de contenu ;
 - pseudonyme ;
 - profil.
 
 ## Syntaxe
+
 ### Mentions
+
 :::tip
 Pour plus d’informations sur les mentions, voir [ici](./mention.md).
 :::
@@ -24,6 +28,7 @@ Pour plus d’informations sur les mentions, voir [ici](./mention.md).
 ```:no-line-numbers
 @alice
 ```
+
 ```:no-line-numbers
 @alice@example.com
 ```
@@ -69,4 +74,5 @@ Plus de détails sur la syntaxe sont disponibles sur le **pense-bête MFM** de l
 ## Informations pour le développement
 
 L’analyse syntaxique de MFM est disponible comme librairie, facilitant son implémentation dans vos applications.
+
 - [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - Analyseur syntaxique en JavaScript.

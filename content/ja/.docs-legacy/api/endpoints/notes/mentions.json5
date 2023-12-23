@@ -1,9 +1,7 @@
 {
 	summary: 'ログイン中のユーザに言及しているノートの一覧を取得します。',
 	description: 'ログイン中のユーザに言及 (mention) しているノートの一覧を取得します。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: true,
 	req: {
 		type: 'object',

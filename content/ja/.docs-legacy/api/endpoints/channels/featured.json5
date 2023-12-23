@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'channels',
-	],
+	tags: ['channels'],
 	requireCredential: false,
 	req: {
 		type: 'object',

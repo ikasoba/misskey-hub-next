@@ -1,9 +1,7 @@
 {
 	summary: 'Webhookを削除します。',
 	description: 'Webhookを削除します。',
-	tags: [
-		'webhooks',
-	],
+	tags: ['webhooks'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'Webhookのid。',
 			},
 		},
-		required: [
-			'webhookId',
-		],
+		required: ['webhookId'],
 	},
 	res: {},
 	errors: {

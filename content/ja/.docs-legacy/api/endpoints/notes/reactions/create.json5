@@ -1,9 +1,7 @@
 {
 	summary: 'ノートにリアクションします。',
 	description: 'ノートにリアクションします。',
-	tags: [
-		'reactions',
-	],
+	tags: ['reactions'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -17,10 +15,7 @@
 				description: 'リアクションを指定します。リアクションはUnicode絵文字もしくはカスタム絵文字です。カスタム絵文字の場合はコロンで絵文字名を括ります。',
 			},
 		},
-		required: [
-			'noteId',
-			'reaction',
-		],
+		required: ['noteId', 'reaction'],
 	},
 	res: {},
 	errors: {

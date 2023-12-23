@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -70,14 +68,7 @@
 					$ref: 'misskey://UserDetailed',
 				},
 			},
-			required: [
-				'id',
-				'createdAt',
-				'type',
-				'info',
-				'userId',
-				'user',
-			],
+			required: ['id', 'createdAt', 'type', 'info', 'userId', 'user'],
 		},
 	},
 	errors: {},

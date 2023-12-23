@@ -10,16 +10,16 @@ const { resolve } = useRouter();
 const localePath = useGLocalePath();
 
 const props = defineProps({
-    href: {
-        type: String,
-        default: ''
-    },
-    target: {
-        type: String,
-        default: undefined,
-        required: false
-    },
-})
+	href: {
+		type: String,
+		default: '',
+	},
+	target: {
+		type: String,
+		default: undefined,
+		required: false,
+	},
+});
 
 const realHref = ref(props.href);
 const realTarget = ref(props.target);
@@ -27,26 +27,26 @@ const realTarget = ref(props.target);
 const url = new $URL(realHref.value);
 
 if (isLocalPath(realHref.value)) {
-    // 内部リンクの場合
-    const route = resolve(realHref.value);
-    if (route.name && !route.name.toString().includes('___')) {
-        // 渡されたパスがローカライズされたルートではない場合はローカライズされたパスを返す
-        realHref.value = sanitizeInternalPath(localePath(url.fullpath));
-    }
+	// 内部リンクの場合
+	const route = resolve(realHref.value);
+	if (route.name && !route.name.toString().includes('___')) {
+		// 渡されたパスがローカライズされたルートではない場合はローカライズされたパスを返す
+		realHref.value = sanitizeInternalPath(localePath(url.fullpath));
+	}
 
-    // 相対パスの場合（trailing slashがあるので１つくり下げる）
-    if (isRelative(realHref.value)) {
-        realHref.value = joinURL('../', realHref.value);
-    }
+	// 相対パスの場合（trailing slashがあるので１つくり下げる）
+	if (isRelative(realHref.value)) {
+		realHref.value = joinURL('../', realHref.value);
+	}
 } else if (rootDomain.host !== url.host) {
-    realTarget.value = '_blank';
+	realTarget.value = '_blank';
 }
 </script>
 
 <template>
-    <GNuxtLink :to="realHref" :target="realTarget">
-        <slot></slot>
-        <MiIco v-if="realHref.startsWith('x-mi-web://')" class="text-xs mx-1" />
-        <ExtIco v-else-if="realTarget === '_blank'" class="text-xs mx-1" />
-    </GNuxtLink>
+	<GNuxtLink :to="realHref" :target="realTarget">
+		<slot></slot>
+		<MiIco v-if="realHref.startsWith('x-mi-web://')" class="text-xs mx-1" />
+		<ExtIco v-else-if="realTarget === '_blank'" class="text-xs mx-1" />
+	</GNuxtLink>
 </template>

@@ -1,9 +1,7 @@
 {
 	summary: 'クリップの情報を更新します。',
 	description: 'クリップの情報を更新します。',
-	tags: [
-		'clips',
-	],
+	tags: ['clips'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -31,10 +29,7 @@
 				description: 'クリップの説明。',
 			},
 		},
-		required: [
-			'clipId',
-			'name',
-		],
+		required: ['clipId', 'name'],
 	},
 	res: {
 		type: 'object',

@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'federation',
-	],
+	tags: ['federation'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -12,9 +10,7 @@
 				type: 'string',
 			},
 		},
-		required: [
-			'uri',
-		],
+		required: ['uri'],
 	},
 	res: {
 		optional: false,
@@ -27,9 +23,7 @@
 						type: 'string',
 						optional: false,
 						nullable: false,
-						enum: [
-							'User',
-						],
+						enum: ['User'],
 					},
 					object: {
 						type: 'object',
@@ -39,10 +33,7 @@
 						$ref: 'misskey://UserDetailedNotMe',
 					},
 				},
-				required: [
-					'type',
-					'object',
-				],
+				required: ['type', 'object'],
 			},
 			{
 				type: 'object',
@@ -51,9 +42,7 @@
 						type: 'string',
 						optional: false,
 						nullable: false,
-						enum: [
-							'Note',
-						],
+						enum: ['Note'],
 					},
 					object: {
 						type: 'object',
@@ -63,10 +52,7 @@
 						$ref: 'misskey://Note',
 					},
 				},
-				required: [
-					'type',
-					'object',
-				],
+				required: ['type', 'object'],
 			},
 		],
 	},

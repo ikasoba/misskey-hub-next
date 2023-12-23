@@ -1,21 +1,14 @@
 {
 	summary: 'ノートを作成します。',
 	description: 'ノートを作成します。返信やRenoteもこのAPIで行います。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: true,
 	req: {
 		type: 'object',
 		properties: {
 			visibility: {
 				type: 'string',
-				enum: [
-					'public',
-					'home',
-					'followers',
-					'specified',
-				],
+				enum: ['public', 'home', 'followers', 'specified'],
 				default: 'public',
 				description: 'ノートの公開範囲。',
 			},
@@ -134,9 +127,7 @@
 						description: '指定すると、ノート作成からexpiredAfter秒後に投票を締め切ります。expiresAtと併せて指定した場合、expiresAtが優先されます。',
 					},
 				},
-				required: [
-					'choices',
-				],
+				required: ['choices'],
 				description: '投票に関するパラメータ。',
 			},
 		},
@@ -150,19 +141,13 @@
 						nullable: false,
 					},
 				},
-				required: [
-					'text',
-				],
+				required: ['text'],
 			},
 			{
-				required: [
-					'fileIds',
-				],
+				required: ['fileIds'],
 			},
 			{
-				required: [
-					'mediaIds',
-				],
+				required: ['mediaIds'],
 			},
 			{
 				properties: {
@@ -171,14 +156,10 @@
 						nullable: false,
 					},
 				},
-				required: [
-					'poll',
-				],
+				required: ['poll'],
 			},
 			{
-				required: [
-					'renoteId',
-				],
+				required: ['renoteId'],
 			},
 		],
 	},
@@ -196,9 +177,7 @@
 				description: '作成されたノート',
 			},
 		},
-		required: [
-			'createdNote',
-		],
+		required: ['createdNote'],
 	},
 	errors: {
 		'b5c90186-4ab0-49c8-9bba-a1f76c282ba4': {

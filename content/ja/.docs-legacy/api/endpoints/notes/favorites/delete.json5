@@ -1,9 +1,7 @@
 {
 	summary: 'ノートをお気に入りから解除します。',
 	description: 'ノートをお気に入りから解除します。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ノートのid。',
 			},
 		},
-		required: [
-			'noteId',
-		],
+		required: ['noteId'],
 	},
 	res: {},
 	errors: {

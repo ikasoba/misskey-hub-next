@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -17,10 +15,7 @@
 				minLength: 1,
 			},
 		},
-		required: [
-			'username',
-			'password',
-		],
+		required: ['username', 'password'],
 	},
 	res: {
 		type: 'object',
@@ -34,9 +29,7 @@
 				nullable: false,
 			},
 		},
-		required: [
-			'token',
-		],
+		required: ['token'],
 		$ref: 'misskey://User',
 	},
 	errors: {},

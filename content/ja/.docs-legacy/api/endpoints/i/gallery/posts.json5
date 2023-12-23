@@ -1,9 +1,7 @@
 {
 	summary: 'ギャラリーへの投稿を取得します。',
 	description: 'ログイン中のユーザーによるギャラリーへの投稿を取得します。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',

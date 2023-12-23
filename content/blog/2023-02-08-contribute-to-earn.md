@@ -4,6 +4,7 @@ description: 'Misskey開発に貢献すると報奨金がもらえるキャン�
 ---
 
 # Contribute Misskey to Earn
+
 Misskey開発に貢献すると報奨金がもらえるキャンペーンを行います。  
 We offer campaigns you to recieve rewards for contributing to the development of Misskey.
 
@@ -25,6 +26,7 @@ Rewards come from donations from patrons.
 :::
 
 ## カバレッジ上げ / Increase Coverage
+
 Codecovのカバレッジを1%上げるごとに、次に挙げる報奨金を全て獲得できます:  
 You will receive following rewards for every 1% increase of Codecov coverage:
 
@@ -33,14 +35,17 @@ You will receive following rewards for every 1% increase of Codecov coverage:
    （支払い方法は銀行振込かPayPal.me / By PayPal.me but the amount may vary for overseas transfers.）
 
 ## 型エラー潰し / Type Errors Buster
+
 TypeScriptで書かれたソースコードの型エラーを取り除くと、程度に応じて報奨金進呈  
 You will receive rewards according to the degree if you remove typing errors in source code written in TypeScript.
 
 ## ドキュメント整備 / Documentation Maintenance
+
 Misskey Hubのドキュメントを整備すると、程度に応じて報奨金進呈  
 You will receive rewards according to the degree if you maintain the documentation in Misskey Hub.
 
 ## 脆弱性の報告 / Report Vulnerability
+
 脆弱性の報告で、次に挙げる報奨金を全て獲得できます:  
 You will receive all of the following rewards if you report vulnerabilities to us:
 
@@ -54,10 +59,12 @@ You will receive all of the following rewards if you report vulnerabilities to u
 <https://github.com/misskey-dev/misskey/blob/develop/SECURITY.md>
 
 ## バックエンドのメモリリーク解消で2万円程度進呈 / Eliminate Memory Leaks in the Backend
+
 バックエンドのメモリリークを解消すると、2万円程度進呈します。  
 You will receive 20000JPY when you can eliminate memory leaks in the backend.
 
 ## フロントエンドのメモリリーク解消で2万円程度進呈 / Eliminate Memory Leaks in the Frontend
+
 フロントエンドのメモリリークを解消すると、2万円程度進呈します。  
 You will receive 20000JPY when you can eliminate memory leaks in the frontend.
 

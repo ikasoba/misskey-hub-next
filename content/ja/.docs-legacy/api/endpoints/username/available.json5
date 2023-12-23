@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザー名が利用可能か確認します。',
 	description: 'ユーザー名が利用可能か確認します。',
-	tags: [
-		'users',
-	],
+	tags: ['users'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ユーザー名',
 			},
 		},
-		required: [
-			'username',
-		],
+		required: ['username'],
 	},
 	res: {
 		type: 'object',
@@ -30,9 +26,7 @@
 				description: 'ユーザー名が利用可能であれば true です。',
 			},
 		},
-		required: [
-			'available',
-		],
+		required: ['available'],
 	},
 	errors: {},
 }

@@ -1,9 +1,7 @@
 {
 	summary: 'ファイルを削除します。',
 	description: 'ファイルを削除します。',
-	tags: [
-		'drive',
-	],
+	tags: ['drive'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'ファイルのid。',
 			},
 		},
-		required: [
-			'fileId',
-		],
+		required: ['fileId'],
 	},
 	res: {},
 	errors: {

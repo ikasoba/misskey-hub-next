@@ -1,9 +1,7 @@
 {
 	summary: 'ユーザーをミュートします。',
 	description: 'ユーザーをミュートします。',
-	tags: [
-		'account',
-	],
+	tags: ['account'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -19,9 +17,7 @@
 				description: 'ミュートの期限。エポック秒で指定します。nullを指定すると、無期限ミュートになります。',
 			},
 		},
-		required: [
-			'userId',
-		],
+		required: ['userId'],
 	},
 	res: {},
 	errors: {

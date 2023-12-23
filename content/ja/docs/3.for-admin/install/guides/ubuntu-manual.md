@@ -44,12 +44,12 @@ OSの違い、Misskey本体や依存するソフトウェアのバージョン�
 
 ## 環境と条件
 
-*   OSは**Ubuntu 22.04.1 LTS**を利用する。
-*   ハードウェア要件としては、CPUは最近のものなら最小限で動く。アーキテクチャはamd64及びarm64を想定している。
-*   メモリは1.5GB程度あればよい。（Viteの導入等により、1.5GB程度でもビルド可能になった）
-*   独自のドメインを購入し、CloudFlareを使用する。
-*   ドメインは[Google Domains](https://domains.google/intl/ja_jp/)などで予め用意しておくこと。
-*   ここではドメインをexample.tldとして解説を進めるので、自分が買ったドメインに適宜置き換えて読むこと。開発環境の場合はlocalhostと読み替えます（設定ファイルの項で別途説明）
+- OSは**Ubuntu 22.04.1 LTS**を利用する。
+- ハードウェア要件としては、CPUは最近のものなら最小限で動く。アーキテクチャはamd64及びarm64を想定している。
+- メモリは1.5GB程度あればよい。（Viteの導入等により、1.5GB程度でもビルド可能になった）
+- 独自のドメインを購入し、CloudFlareを使用する。
+- ドメインは[Google Domains](https://domains.google/intl/ja_jp/)などで予め用意しておくこと。
+- ここではドメインをexample.tldとして解説を進めるので、自分が買ったドメインに適宜置き換えて読むこと。開発環境の場合はlocalhostと読み替えます（設定ファイルの項で別途説明）
 
 :::danger
 一度使用を始めたサーバーのドメイン・ホスト名は、決して変更しないでください！
@@ -389,7 +389,7 @@ port: 3000
 db:
   host: localhost
   port: 5432
-  db  : mk1 # 〇 PostgreSQLのデータベース名
+  db: mk1 # 〇 PostgreSQLのデータベース名
   user: misskey # 〇 PostgreSQLのユーザー名
   pass: hoge # ● PostgreSQLのパスワード
 
@@ -427,9 +427,9 @@ sudo nano /etc/nginx/conf.d/misskey.conf
 
 [Misskey Hub](https://misskey-hub.net/docs/admin/nginx/)の設定例をnanoへコピー＆ペーストし、次の部分を自分のものに書き換える。
 
-*   18行目と30行目のドメイン名
-*   34-35行目の証明書へのパスをCertbotで取得したものに (基本的にexample.tldを置き換えるだけでOK)
-*   56行目 (If it's behind another reverse proxy or CDN, remove the following.) から4行を削除
+- 18行目と30行目のドメイン名
+- 34-35行目の証明書へのパスをCertbotで取得したものに (基本的にexample.tldを置き換えるだけでOK)
+- 56行目 (If it's behind another reverse proxy or CDN, remove the following.) から4行を削除
 
 変更を保存する。
 
@@ -479,8 +479,8 @@ RAMの不足が考えられる。
 Misskeyのビルドやデータベースのマイグレーション（初期化を含む）には、RAMが2GB以上必要になっている。\
 RAMが足りない場合、以下のような解決策が考えられる。
 
-*   サーバーにスワップを追加する
-*   ローカルでビルドしたもの（builtディレクトリ）をsftpで転送する
+- サーバーにスワップを追加する
+- ローカルでビルドしたもの（builtディレクトリ）をsftpで転送する
 
 ## データベースの初期化
 
@@ -578,9 +578,9 @@ Misskeyサーバーに自分のアカウントを登録・ログインし、設�
 
 ## Misskeyの設定を続ける
 
-*   [**Misskeyサーバーで最初に設定するべきサーバー設定とその他設定の説明**](https://hide.ac/articles/Y504SIabp)
-*   [**Squidプロキシを設定してMisskeyを守る**](https://hide.ac/articles/MC7WsPDqw)
-*   [**Misskeyのデータベースをバックアップしよう【OCIオブジェクトストレージ編】**](https://hide.ac/articles/E2Ea3cauk)
+- [**Misskeyサーバーで最初に設定するべきサーバー設定とその他設定の説明**](https://hide.ac/articles/Y504SIabp)
+- [**Squidプロキシを設定してMisskeyを守る**](https://hide.ac/articles/MC7WsPDqw)
+- [**Misskeyのデータベースをバックアップしよう【OCIオブジェクトストレージ編】**](https://hide.ac/articles/E2Ea3cauk)
 
 ## Misskeyのアップデート
 

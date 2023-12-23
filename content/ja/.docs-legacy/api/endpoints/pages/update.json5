@@ -1,9 +1,7 @@
 {
 	summary: 'ページのコンテンツ・属性を変更します。',
 	description: 'ページのコンテンツ・属性を変更します。',
-	tags: [
-		'pages',
-	],
+	tags: ['pages'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -55,10 +53,7 @@
 			},
 			font: {
 				type: 'string',
-				enum: [
-					'serif',
-					'sans-serif',
-				],
+				enum: ['serif', 'sans-serif'],
 				description: 'ページで使用するフォント。',
 			},
 			alignCenter: {
@@ -70,14 +65,7 @@
 				description: 'trueにすると、ピン留めされているときにタイトルを非表示にします。',
 			},
 		},
-		required: [
-			'pageId',
-			'title',
-			'name',
-			'content',
-			'variables',
-			'script',
-		],
+		required: ['pageId', 'title', 'name', 'content', 'variables', 'script'],
 	},
 	res: {},
 	errors: {

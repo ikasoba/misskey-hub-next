@@ -1,9 +1,7 @@
 {
 	summary: 'ノートのリアクションを取得します。',
 	description: 'ノートのリアクションを取得します。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -16,7 +14,7 @@
 			type: {
 				type: 'string',
 				nullable: true,
-				description: 'リアクションの種類。リアクションはUnicode絵文字もしくはカスタム絵文字です。カスタム絵文字の場合はコロンで絵文字名を括ります。', 
+				description: 'リアクションの種類。リアクションはUnicode絵文字もしくはカスタム絵文字です。カスタム絵文字の場合はコロンで絵文字名を括ります。',
 			},
 			limit: {
 				type: 'integer',
@@ -28,7 +26,7 @@
 			offset: {
 				type: 'integer',
 				default: 0,
-				description: '検索結果の先頭 offset 個をスキップします。'
+				description: '検索結果の先頭 offset 個をスキップします。',
 			},
 			sinceId: {
 				type: 'string',
@@ -41,9 +39,7 @@
 				description: '指定すると、idがその値よりも小さいリアクションを返します。',
 			},
 		},
-		required: [
-			'noteId',
-		],
+		required: ['noteId'],
 	},
 	res: {
 		type: 'array',

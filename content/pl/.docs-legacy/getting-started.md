@@ -1,4 +1,5 @@
-# Zacznij z  Misskey
+# Zacznij z Misskey
+
 Misskey jest programem i projektem.
 Serwer na którym uruchomione jest Misskey, który jest otwarty do publicznego Internetu jest nazwany **Instancją**.
 Aby używać Misskey musisz utworzyć konto na jednej z instancji i korzystać z tej instancji.
@@ -16,7 +17,10 @@ Federacja Misskey jest oparta na otwartym i znanym standardzie o nazwie Activity
 :::
 
 ## Wybieranie instancji
+
 ### Motywy instancji
+
 Niektóre instancje mogą mieć określoną tematykę na przykład: "Lubie jakieś rzeczy i aktywności".
 Rekomendujemy znaleść instancje o tematycę która najlepiej do ciebie pasuje
+
 ### Społeczność instancji

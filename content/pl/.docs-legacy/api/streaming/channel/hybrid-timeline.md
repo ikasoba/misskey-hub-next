@@ -1,5 +1,5 @@
 ---
-description: "Kanał gdzie posty społecznościowe są nadawane."
+description: 'Kanał gdzie posty społecznościowe są nadawane.'
 ---
 
 # `hybridTimeline`

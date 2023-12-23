@@ -3,7 +3,7 @@
 Misskey peut générer et afficher des diagrammes à partir des nombreuses données fédérées d’une instance.
 Les diagrammes vous permettent d’avoir une interprétation visuelle de l’utilisation, l’état de fédération, et l’activité de chaque membre.
 
-Les diagrammes d’une instance sont consultables via la page d’*informations d’une instance* (acessible en cliquant sur le logo de l’instance dans le menu de navigation).
+Les diagrammes d’une instance sont consultables via la page d’_informations d’une instance_ (acessible en cliquant sur le logo de l’instance dans le menu de navigation).
 
 Ci-dessous sont décrit chaque diagramme et son contenu.
 

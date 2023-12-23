@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -45,11 +43,7 @@
 			},
 			origin: {
 				type: 'string',
-				enum: [
-					'combined',
-					'local',
-					'remote',
-				],
+				enum: ['combined', 'local', 'remote'],
 				default: 'combined',
 			},
 			username: {

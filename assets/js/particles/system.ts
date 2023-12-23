@@ -35,7 +35,10 @@ export class System {
 	private rippleColor: number;
 	private dropColor: number;
 
-	constructor(loader, config: { particleColor: string; rippleColor: string; dropColor: string; }) {
+	constructor(
+		loader,
+		config: { particleColor: string; rippleColor: string; dropColor: string },
+	) {
 		this.loader = loader;
 
 		this.particleColor = hexToInt(config.particleColor);
@@ -52,61 +55,76 @@ export class System {
 
 		this.loader.scene.add(this.particleGroup);
 
-		for(let col = 0; col < this.cols; col++) {
-			for(let row = 0; row < this.rows; row++) {
+		for (let col = 0; col < this.cols; col++) {
+			for (let row = 0; row < this.rows; row++) {
 				let x = Calc.map(col, 0, this.cols - 1, -this.size / 2, this.size / 2);
 				let y = 0;
 				let z = Calc.map(row, 0, this.rows - 1, -this.size / 2, this.size / 2);
 
-				this.particles.push(new Particle({
-					group: this.particleGroup,
-					x: x,
-					y: y,
-					z: z,
-					size: 0.01,
-					color: this.particleColor,
-					opacity: 0.01
-				}, this));
+				this.particles.push(
+					new Particle(
+						{
+							group: this.particleGroup,
+							x: x,
+							y: y,
+							z: z,
+							size: 0.01,
+							color: this.particleColor,
+							opacity: 0.01,
+						},
+						this,
+					),
+				);
 			}
 		}
 	}
 
 	createDrop(x?, y?, z?, strength?) {
-		this.drops.push(new Drop({
-			array: this.drops,
-			group: this.particleGroup,
-			x: x === undefined ? Calc.rand(-this.size / 2, this.size / 2) : x,
-			y: y === undefined ? Calc.rand(30, 50) : y,
-			z: z === undefined ? Calc.rand(-this.size / 2, this.size / 2) : z,
-			size: 0.15,
-			color: this.dropColor,
-			opacity: 0,
-			strength: strength
-		}, this));
+		this.drops.push(
+			new Drop(
+				{
+					array: this.drops,
+					group: this.particleGroup,
+					x: x === undefined ? Calc.rand(-this.size / 2, this.size / 2) : x,
+					y: y === undefined ? Calc.rand(30, 50) : y,
+					z: z === undefined ? Calc.rand(-this.size / 2, this.size / 2) : z,
+					size: 0.15,
+					color: this.dropColor,
+					opacity: 0,
+					strength: strength,
+				},
+				this,
+			),
+		);
 	}
 
 	updateDrops() {
 		let i = this.drops.length;
-		while(i--) {
+		while (i--) {
 			this.drops[i].update(i);
 		}
 	}
 
 	createRipple(x, z, strength) {
-		this.ripples.push(new Ripple({
-			array: this.ripples,
-			group: this.particleGroup,
-			x: x,
-			y: -0.1,
-			z: z,
-			color: this.rippleColor,
-			strength: strength
-		}, this));
+		this.ripples.push(
+			new Ripple(
+				{
+					array: this.ripples,
+					group: this.particleGroup,
+					x: x,
+					y: -0.1,
+					z: z,
+					color: this.rippleColor,
+					strength: strength,
+				},
+				this,
+			),
+		);
 	}
 
 	updateRipples() {
 		let i = this.ripples.length;
-		while(i--) {
+		while (i--) {
 			this.ripples[i].update(i);
 		}
 	}
@@ -114,12 +132,12 @@ export class System {
 	update() {
 		{
 			let i = this.particles.length;
-			while(i--) {
+			while (i--) {
 				this.particles[i].update();
 			}
 		}
 
-		if(this.tick >= this.dropTick) {
+		if (this.tick >= this.dropTick) {
 			this.createDrop();
 			this.dropTick = Calc.randInt(this.dropTickMin, this.dropTickMax);
 			this.tick = 0;
@@ -127,12 +145,12 @@ export class System {
 
 		this.updateDrops();
 		this.updateRipples();
-	
+
 		{
 			let i = this.particles.length;
-			while(i--) {
+			while (i--) {
 				let j = this.ripples.length;
-				while(j--) {
+				while (j--) {
 					let particle = this.particles[i];
 					let ripple = this.ripples[j];
 					let influence = ripple.getInfluenceVector(particle.base);
@@ -143,10 +161,12 @@ export class System {
 			}
 		}
 
-		this.particleGroup.rotation.x = Math.cos(this.loader.elapsedMilliseconds * 0.0005) * 0.1;
-		this.particleGroup.rotation.y = Math.PI * 0.25 + Math.sin(this.loader.elapsedMilliseconds * 0.0005) * -0.2;
-	
+		this.particleGroup.rotation.x =
+			Math.cos(this.loader.elapsedMilliseconds * 0.0005) * 0.1;
+		this.particleGroup.rotation.y =
+			Math.PI * 0.25 +
+			Math.sin(this.loader.elapsedMilliseconds * 0.0005) * -0.2;
+
 		this.tick += this.loader.deltaTimeNormal;
 	}
 }
-

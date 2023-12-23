@@ -535,7 +535,7 @@ Released at: 2022-03-09
 
 - The ability to set the maximum number of characters in a note has been removed and the default is now a flat 3000 characters @syuilo
 - Misskey can no longer terminate HTTPS connections. @Johann150
-  - If you did not use a reverse proxy (e.g. nginx) before, you will probably need to adjust your configuration file and set up a reverse proxy. The https configuration key is no longer    recognized!
+  - If you did not use a reverse proxy (e.g. nginx) before, you will probably need to adjust your configuration file and set up a reverse proxy. The https configuration key is no longer recognized!
 
 ### Improvements
 

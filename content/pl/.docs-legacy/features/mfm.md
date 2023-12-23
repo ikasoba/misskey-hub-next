@@ -68,7 +68,7 @@ Po więcej informacji zobacz [tutaj](./custom-emoji).
 ---
 
 :::tip
-Więcej składni można zobaczyć w ***Ściądze MFM** dostępnej w przeglądarkowym Menu Misskey pod `/mfm-cheat-sheet` twojej instancji.
+Więcej składni można zobaczyć w **\*Ściądze MFM** dostępnej w przeglądarkowym Menu Misskey pod `/mfm-cheat-sheet` twojej instancji.
 :::
 
 ## Informacje dla deweloperów

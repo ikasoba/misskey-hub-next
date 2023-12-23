@@ -1,5 +1,5 @@
 ---
-description: "Questo canale fornisce informazioni di base"
+description: 'Questo canale fornisce informazioni di base'
 ---
 
 # `main`

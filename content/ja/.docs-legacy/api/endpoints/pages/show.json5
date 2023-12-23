@@ -1,9 +1,7 @@
 {
 	summary: 'ページを取得します。',
 	description: 'ページを取得します。',
-	tags: [
-		'pages',
-	],
+	tags: ['pages'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -16,9 +14,7 @@
 						description: 'ページのid。',
 					},
 				},
-				required: [
-					'pageId',
-				],
+				required: ['pageId'],
 			},
 			{
 				properties: {
@@ -31,10 +27,7 @@
 						description: 'ページを作成したユーザーのユーザー名。',
 					},
 				},
-				required: [
-					'name',
-					'username',
-				],
+				required: ['name', 'username'],
 			},
 		],
 	},

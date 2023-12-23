@@ -30,6 +30,7 @@ They will not be notified that you have muted them, and they will not know that 
 :::
 
 ## Blocking
+
 If you block a user, they will not be able to see your content and they will not be able to do any the following actions:
 
 - follow you

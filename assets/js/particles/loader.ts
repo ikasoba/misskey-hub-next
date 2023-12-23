@@ -30,9 +30,15 @@ export class Loader {
 		this.onResize();
 
 		this.system = new System(this, {
-			particleColor: tinycolor(getComputedStyle(this.dom).getPropertyValue('--c-text')).toHexString(),
-			dropColor: tinycolor(getComputedStyle(this.dom).getPropertyValue('--c-brand')).toHexString(),
-			rippleColor: tinycolor(getComputedStyle(this.dom).getPropertyValue('--c-brand')).toHexString(),
+			particleColor: tinycolor(
+				getComputedStyle(this.dom).getPropertyValue('--c-text'),
+			).toHexString(),
+			dropColor: tinycolor(
+				getComputedStyle(this.dom).getPropertyValue('--c-brand'),
+			).toHexString(),
+			rippleColor: tinycolor(
+				getComputedStyle(this.dom).getPropertyValue('--c-brand'),
+			).toHexString(),
 		});
 		this.loop();
 	}
@@ -64,7 +70,7 @@ export class Loader {
 	setupRenderer() {
 		this.renderer = new THREE.WebGLRenderer({
 			alpha: true,
-			antialias: true
+			antialias: true,
 		});
 
 		this.dom.appendChild(this.renderer.domElement);
@@ -72,7 +78,7 @@ export class Loader {
 
 	update() {
 		this.deltaTimeSeconds = this.clock.getDelta();
-		if(this.diffTime) {
+		if (this.diffTime) {
 			this.deltaTimeSeconds -= this.diffTime;
 			this.diffTime = 0;
 		}

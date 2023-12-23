@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -26,12 +24,7 @@
 				minLength: 1,
 			},
 		},
-		required: [
-			'id',
-			'title',
-			'text',
-			'imageUrl',
-		],
+		required: ['id', 'title', 'text', 'imageUrl'],
 	},
 	res: {},
 	errors: {

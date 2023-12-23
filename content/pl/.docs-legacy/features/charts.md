@@ -2,7 +2,7 @@
 
 Misskey może generować i wyświelać wykresy różnych źródeł. Wykresy pozwalają uzyskać wizualnie informacje na temat użycia, statusie federacji i aktywności użytkowników
 
-Wykresy instancji są widoczne z strony z *informacjami instancji* (dostępna klikając w logo instancji w menu nawigacji)
+Wykresy instancji są widoczne z strony z _informacjami instancji_ (dostępna klikając w logo instancji w menu nawigacji)
 
 Poniżej jest opis każdego wykresu i jego zawartości:
 

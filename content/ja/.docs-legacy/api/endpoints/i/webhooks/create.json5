@@ -1,9 +1,7 @@
 {
 	summary: 'Webhookを作成します。',
 	description: 'Webhookを作成します。Webhookについての詳細は該当する項目を参照してください。',
-	tags: [
-		'webhooks',
-	],
+	tags: ['webhooks'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -44,12 +42,7 @@
 				description: '対象となるイベント。各イベントの発生条件や、HTTPリクエストに含まれる情報については、Webhookの項目を参照してください。',
 			},
 		},
-		required: [
-			'name',
-			'url',
-			'secret',
-			'on',
-		],
+		required: ['name', 'url', 'secret', 'on'],
 	},
 	res: {},
 	errors: {},

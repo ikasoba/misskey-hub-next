@@ -108,6 +108,7 @@ https://{host}/api/miauth/{session}/check
 | `user`  | 사용자 정보               |
 
 ## Using the API
+
 Once you have your API access token, you can use the API by making requests to the various endpoints.
 
 :::tip
@@ -122,8 +123,8 @@ Example of a body with an access token (for meta):
 
 ```json
 {
-    "i": "HogEFugA1341",
-    "detail": false
+	"i": "HogEFugA1341",
+	"detail": false
 }
 ```
 

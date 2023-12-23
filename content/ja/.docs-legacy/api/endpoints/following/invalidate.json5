@@ -1,9 +1,7 @@
 {
 	summary: '他のユーザーからのフォローを無効にします（フォロワーを解除します）。',
 	description: '他のユーザーから、ログイン中のユーザーへのフォローを無効にします（フォロワーを解除します）。',
-	tags: [
-		'following',
-	],
+	tags: ['following'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: '自身をフォローしているユーザーのid。',
 			},
 		},
-		required: [
-			'userId',
-		],
+		required: ['userId'],
 	},
 	res: {
 		type: 'object',

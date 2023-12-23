@@ -1,5 +1,5 @@
 ---
-description: "Questa guida spiega come installare Misskey dentro Docker"
+description: 'Questa guida spiega come installare Misskey dentro Docker'
 ---
 
 # Costruire Misskey tramite Docker Compose

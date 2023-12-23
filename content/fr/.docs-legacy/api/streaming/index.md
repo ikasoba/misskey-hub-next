@@ -21,6 +21,7 @@ wss://{host}/streaming?i={token}
 ```
 
 où
+
 - `{host}` est le nom de l’hôte de l’instance ;
 - `{token}` est la clé d’accès.
 
@@ -35,6 +36,7 @@ Pour recevoir ces évènements, vous devez rejoindre un **canal** sur le flux, t
 **Toutes les données sont au format JSON**
 
 ## Canal
+
 L’API de flux Misskey utilise un concept de canaux. Ce mécanisme sépare les informations reçus et envoyées.
 En rejoignant des canux, vous aurez la possibilité de recevoir et envoyer de nombreuses informations.
 
@@ -45,6 +47,7 @@ Vous pouvez rejoindre plusieurs canaux simultanément via un flux unique.
 Les sections suivantes décrivent comment utiliser les canaux. Pour voir quels canaux sont disponible, se référer à la [liste des canaux](./channel/index.md).
 
 ### Rejoindre un canal
+
 Pour rejoindre un canad, envoyez les données JSON suivant sur le flux :
 
 ```js
@@ -61,6 +64,7 @@ Pour rejoindre un canad, envoyez les données JSON suivant sur le flux :
 ```
 
 où
+
 - `channel` est le nom du canal auquel se connecter. Les type de canaux sont décrits par la suite ;
 - `id` est un identifiant arbitraire pour interragir avec ce canal. Il est nécessaire pour identifier de quel canal le message provient, un flux pouvant contenir différent canaux. Cet identifiant peut être un UUID ou un nombre aléatoire ;
 - `params` sont les paramètres requis pour rejoindre un canal. Chaque canal requiert des paramètres propres. Si un canal n’en demande pas, alors cette propriété peut être laissée vide.
@@ -70,9 +74,11 @@ L’identifiant n’est pas unique par canal mais par connexion car un canal peu
 :::
 
 ### Recevoir des messages de canaux
+
 Lors de la réception d’un message indiquant une nouvelle publication sur un canal, vous saurez en temps réel qu’une nouvelle publication est disponible sur votre fil.
 
 Quand un canal génère un message, les données JSON suivantes sont envoyées :
+
 ```js
 {
 	type: 'channel',
@@ -87,14 +93,17 @@ Quand un canal génère un message, les données JSON suivantes sont envoyées 
 ```
 
 où
+
 - `id` est l’identifiant utilisé lors de la connexion au canal. Cela vous permet de savoir de quel canal le message vient ;
 - `type` est le type de message. Selon le canal, celui-ci diffère ;
 - `body` contient le contenu du message, celui-ci diffère selon le canal.
 
 ### Envoyer un message via un canal
+
 Sur certains canaux, il est également possible d’envoyer des messages et d’effectuer d’autres opérations en plus de la réception.
 
 Pour envoyer un message à un canal, envoyez les données JSON suivantes :
+
 ```js
 {
 	type: 'channel',
@@ -109,12 +118,15 @@ Pour envoyer un message à un canal, envoyez les données JSON suivantes :
 ```
 
 où
+
 - `id` est l’identifiant utilisé lors de la connexion au canal. Cela vous permet d’indiquer à quel canal le message est destiné ;
 - `type` est le type de message, celui-ci diffère selon les canaux ;
 - `body` contient le corps du message, celui-ci diffère selon les canaux.
 
 ### Se déconnecter d’un canal
+
 Pour se déconnecter d’un canal, envoyez les données JSON suivantes :
+
 ```js
 {
 	type: 'disconnect',
@@ -125,9 +137,11 @@ Pour se déconnecter d’un canal, envoyez les données JSON suivantes :
 ```
 
 où
+
 - `id` est l’identifiant utilisé lors de la connexion au canal. Cela permet d’indiquer de quel canal se déconnecter.
 
 ## Capturer des notes
+
 Misskey propose un mécanisme de capture de note. Cela permet de recevoir un flux d’évènements pour une note spécifique.
 
 Par exemple, si vous affichez un fil et qu’une personne réagit à une des publications, le client ne peut pas savoir de quelle publication il s’agit et il n’est pas possible d’afficher la réaction en temps réel.
@@ -150,11 +164,13 @@ Pour capturer une note, envoyer les données JSON suivantes :
 ```
 
 où
+
 - `id` est l’identifiant de la note à capturer.
 
 En envoyant ce message, vous demandez à Misskey de capturer la note, et les évènements qui y sont liés vous seront relayés.
 
 Si une note reçoit une réacton, vous recevrez un message au format suivant :
+
 ```js
 {
 	type: 'noteUpdated',
@@ -170,6 +186,7 @@ Si une note reçoit une réacton, vous recevrez un message au format suivant :
 ```
 
 où
+
 - `body.id` est l’identifiant de la note ;
 - `body.type` est letype d’évènement ;
 - `body.body` contient les détails de l’évènement.
@@ -177,6 +194,7 @@ où
 ### Dé-capturer une note
 
 Pour ne plus recevoir d’évènements liés à une note, par exemple si celle-ci n’est plus affichée à l’écran. envoyez les données JSON suivantes :
+
 ```js
 {
 	type: 'unsubNote',
@@ -187,6 +205,7 @@ Pour ne plus recevoir d’évènements liés à une note, par exemple si celle-c
 ```
 
 où
+
 - `id` est l’identifiant de la note.
 
 Une fois ce message envoyé, les évènements liés à cette note ne vous seront plus transmises.

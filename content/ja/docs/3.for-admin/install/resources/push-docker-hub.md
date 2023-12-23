@@ -1,5 +1,4 @@
-GitHub Actionsを使用してDocker Hubへpushする方法
-================================================================
+# GitHub Actionsを使用してDocker Hubへpushする方法
 
 [/.github/workflows/docker.yml](https://github.com/misskey-dev/misskey/blob/develop/.github/workflows/docker.yml) に  
 GitHub ActionによりDocker Hubへpushするワークフローが記述されています。

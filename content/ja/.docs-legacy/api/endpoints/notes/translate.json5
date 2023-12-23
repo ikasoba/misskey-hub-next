@@ -1,9 +1,7 @@
 {
 	summary: 'ノートを翻訳します。',
 	description: 'ノートを翻訳します。',
-	tags: [
-		'notes',
-	],
+	tags: ['notes'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -18,10 +16,7 @@
 				description: '翻訳先の言語。値がDeepL APIのv2/translateエンドポイントのtarget_langパラメータに渡されます。ただし、ハイフン以降は無視されます。例：JAを指定すると日本語、DEを指定するとドイツ語に翻訳します。EN-GB（イギリス英語）はEN（地域を限定しない「英語」）として扱われます。',
 			},
 		},
-		required: [
-			'noteId',
-			'targetLang',
-		],
+		required: ['noteId', 'targetLang'],
 	},
 	res: {
 		type: 'object',

@@ -1,9 +1,7 @@
 {
 	summary: '自サーバー情報を取得します。',
 	description: '自サーバー情報を取得します。',
-	tags: [
-		'meta',
-	],
+	tags: ['meta'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -220,13 +218,7 @@
 							format: 'url',
 						},
 					},
-					required: [
-						'id',
-						'aliases',
-						'category',
-						'host',
-						'url',
-					],
+					required: ['id', 'aliases', 'category', 'host', 'url'],
 				},
 			},
 			ads: {
@@ -256,11 +248,7 @@
 							format: 'url',
 						},
 					},
-					required: [
-						'place',
-						'url',
-						'imageUrl',
-					],
+					required: ['place', 'url', 'imageUrl'],
 				},
 			},
 			requireSetup: {

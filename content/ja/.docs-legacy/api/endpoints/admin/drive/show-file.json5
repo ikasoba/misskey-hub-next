@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -15,9 +13,7 @@
 						format: 'misskey:id',
 					},
 				},
-				required: [
-					'fileId',
-				],
+				required: ['fileId'],
 			},
 			{
 				properties: {
@@ -25,9 +21,7 @@
 						type: 'string',
 					},
 				},
-				required: [
-					'url',
-				],
+				required: ['url'],
 			},
 		],
 	},
@@ -121,10 +115,7 @@
 						example: 'rgb(40,65,87)',
 					},
 				},
-				required: [
-					'width',
-					'height',
-				],
+				required: ['width', 'height'],
 			},
 			storedInternal: {
 				type: 'boolean',

@@ -16,6 +16,7 @@ MisskeyInstallBattle参加者が増えましたが、それに伴い時期を追
 また、拙著の[Ubuntu向けsystemd版解説](https://hide.ac/articles/iFwm5HDvH)、[Oracle Cloud版詳細解説](https://hide.ac/articles/csERs-7SU)も参考までにお読みいただけると幸いです。
 
 # Ubuntu向けシェルスクリプトのお知らせ
+
 Ubuntu向け解説はコピペばかりでつまらない！時間がかかる！とにかく面倒！
 
 ……あれ、コピペだけでできるなら、つまり完全自動化できるのでは？
@@ -28,26 +29,31 @@ Ubuntu向け解説はコピペばかりでつまらない！時間がかかる�
 シェルスクリプトに不具合があれば[製作者(aqz)](https://p1.a9z.dev/@aqz)にお知らせいただければと思います。
 
 # インストールとビルド
+
 [構築の手引き](/docs/install/manual.html)をよく読みましょう。
 
 ## ImageMagick関連
-***ImageMagickは不要です！***
+
+**_ImageMagickは不要です！_**
 
 ## ビルドが失敗する
+
 Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要となっています。\
 サーバーをスケールアップする手もありますが、お使いのPCでビルドしてサーバーにデプロイするという手もあります。
 
 ## なんだかうまくいかない
+
 - [構築の手引き](/docs/install/manual.html)をよく読みましょう。
 - node.jsのバージョンが古いかも？
-  * 新しめのバージョンにしましょう。
+  - 新しめのバージョンにしましょう。
 - インストールやビルドの際にErrorとかWARNとかが出てくることがありますが、問題ない場合もあります。とりあえず`npm start`して動作確認しちゃいましょう。
 - node-gypがインストールされていないかも？
-  * `apt install build-essential`を試す。
-  * Windowsは[この記事](https://qiita.com/AkihiroTakamura/items/25ba516f8ec624e66ee7)も参考にしてみる。
+  - `apt install build-essential`を試す。
+  - Windowsは[この記事](https://qiita.com/AkihiroTakamura/items/25ba516f8ec624e66ee7)も参考にしてみる。
 - これでもだめそうだったら、最初から[構築の手引き](/docs/install/manual.html)の手順に従ってやり直してみてください。
 
 ## バージョンアップ後に不具合が発生した
+
 - [構築の手引き](/docs/install/manual.html)およびリリースノートをよく読みましょう。
 - Misskeyのバージョンアップ時にはしっかり`pnpm install`や`pnpm run migrate`してください。それでも直らない場合、`pnpm run clean-all && pnpm install`を試し、`pnpm run build && pnpm run migrate && pnpm start`してみてください。
 - これでもだめそうだったら、最初から[構築の手引き](/docs/install/manual.html)の手順に従ってやり直してみてください。
@@ -55,6 +61,7 @@ Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要�
 ---
 
 # 設定
+
 [構築の手引き](/docs/install/manual.html)をよく読みましょう。
 
 `.config/default.yml`で設定を行います。
@@ -63,13 +70,16 @@ Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要�
 （YAML形式では、`#`から行末まではコメントとして扱われます。）
 
 ## URLとポート番号
+
 URLとポート番号のしくみは、少し分かりにくいと思います。
 
 ### URL, ポートとTLS証明書の設定（Port and TLS settings）part A: example.ymlの解説
+
 リビジョン番号[85a0f69](https://github.com/misskey-dev/misskey/blob/85a0f696bcea779b02749dae596fff94a1df2467/.config/example.yml)時点での[.config/example.yml](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml)に、「Port and TLS settings」として説明図付きで順に書かれていますので、それに沿って設定をしていきましょう。
 本文の解説を日本語訳しながらやっていきます。
 
 #### URLの設定
+
 ```yml
 # Final accessible URL seen by a user.
 # 最終的にユーザーがアクセスするURL
@@ -79,8 +89,8 @@ url: https://example.tld/
 **`url: `には、サーバーにブラウザでアクセスしたときアドレスバーに表示される**(したい)**URLを書きます。**
 
 #### ポートと証明書の設定
-```yml
 
+```yml
 #   ┌───────────────────────┐
 #───┘ Port and TLS settings └───────────────────────────────────
 #### ポートと証明書の設定      ####################################
@@ -124,7 +134,7 @@ url: https://example.tld/
 ```yml
 # To use option 1, uncomment below line.
 # オプション1で設定する場合、以下の行をコメントアウトします　→ しました
-port: 3000    # A port that your Misskey server should listen.
+port: 3000 # A port that your Misskey server should listen.
 ```
 
 以上の3行は、リバースプロキシを挟むときの話です。
@@ -153,9 +163,11 @@ TLS証明書を別途取得し、取得した証明書のディレクトリを`h
 ---
 
 ### URL, ポートとTLS証明書の設定（Port and TLS settings）part B: 全体像
+
 example.ymlの解説文を省くと、default.ymlにおけるポートとTLS証明書の設定は以下のようになります。
 
 #### 方法1 リバースプロキシを挟むとき
+
 ```yml
 url: https://example.tld/
 port: 3000
@@ -166,6 +178,7 @@ port: 3000
 ```
 
 #### 方法2 リバースプロキシを挟まず直接通信するとき
+
 ```yml
 url: https://example.tld/
 # port: 3000
@@ -175,18 +188,21 @@ https:
   cert: /etc/letsencrypt/live/example.tld/fullchain.pem
 ```
 
-----
+---
 
 # `npm start`やアクセス時によく遭遇するエラー
+
 `npm start`でサーバーを立てられたものの、その後不具合に遭遇してしまう場合もあります。
 
 まず、[構築の手引き](/docs/install/manual.html)をよく読みましょう。
 
 ## YAMLのエラーが出る
+
 `default.yml`の構文にミスがある可能性があります。
 行頭に余分なスペースはありませんか？
 
 ## redisに接続できない
+
 redis-serverは起動していますか？
 何らかの接続数の上限に達していませんか？
 
@@ -196,11 +212,13 @@ redis-serverは起動していますか？
 - `default.yml`の`redis:`の`pass:`の行をコメントアウトする。
 
 ## 上部に「開発ビルドです」と書かれた赤いバーが表示される
+
 サーバーを公開する場合は必ずproductionビルドを使いましょう。
 
 製品ビルドにするには、環境変数が`NODE_ENV=production`になるように設定し`npm run build && npm start`します。
 
 ## 新規登録できない
+
 APIに接続できないようです。
 `default.yml`の冒頭の`url:`が正しく設定されているか確認しましょう。
 Node.jsのバージョンや、インストールの設定ももう一度よく確認しましょう。
@@ -208,15 +226,18 @@ Node.jsのバージョンや、インストールの設定ももう一度よく�
 また、正しく`default.yml`が書かれていますか？
 
 ## タイムラインの表示に問題が発生する、リアルタイムでTLが更新されない
+
 タイムラインの読み込みに失敗する場合、mongoDBやPostgreSQLのバージョンが古い可能性があります。
 PostgreSQLはなるべくv13にしてください。
 
 redisの接続も確認した方がよいでしょう。 [→ redisに接続できない？ を参照](#redisに接続できない？)
 
 ## 永遠に「再接続中」と右下に表示される、リアルタイムでTLが更新されない
+
 プロキシを利用している場合、それがWebSocket通信を阻害している可能性が考えられます。
 
 ## オブジェクトストレージ使用時、不具合が出る
+
 オブジェクトストレージの権限の設定が厳しくなっている可能性があります。「ファイル（オブジェクト）が誰でも取得可能」なように権限を設定してみてください。
 また、`default.yml`をもう一度確認してみてください。
 
@@ -226,6 +247,7 @@ S3 example (with CDN, custom domain)は、AWSのデフォルトのドメイン�
 endpointと公開ドメインが同じサービスの場合はS3 exampleのように`baseUrl`は明記しなくてよく、さらにregionの概念がないサービスの場合はregionの行は必要ありません。
 
 ### S3互換サービスでの設定
+
 Misskeyではオブジェクトストレージの接続に[aws-sdk](https://www.npmjs.com/package/aws-sdk)を利用しています。
 Amazon S3に互換性のあるオブジェクトストレージであれば利用できる可能性があります。
 
@@ -234,6 +256,7 @@ Amazon S3に互換性のあるオブジェクトストレージであれば利�
 ---
 
 # まったく解決しなかった場合
+
 以下の順序を試してみてください。
 
 1. Misskeyのドキュメントをよく読む。

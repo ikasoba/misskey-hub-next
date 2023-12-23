@@ -1,9 +1,7 @@
 {
 	summary: 'Webhookを取得します。',
 	description: '与えられたidに対応するWebhookを取得します。',
-	tags: [
-		'webhooks',
-	],
+	tags: ['webhooks'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -14,9 +12,7 @@
 				description: 'Webhookのid。',
 			},
 		},
-		required: [
-			'webhookId',
-		],
+		required: ['webhookId'],
 	},
 	res: {},
 	errors: {

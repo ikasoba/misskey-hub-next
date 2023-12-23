@@ -1,9 +1,7 @@
 {
 	summary: 'すべての通知を既読にします。',
 	description: 'ログイン中のユーザーが受け取ったすべての通知を既読にします。',
-	tags: [
-		'notifications',
-	],
+	tags: ['notifications'],
 	requireCredential: true,
 	req: {
 		type: 'object',

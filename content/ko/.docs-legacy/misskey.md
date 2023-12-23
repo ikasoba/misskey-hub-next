@@ -1,5 +1,5 @@
 ---
-description: "Misskey에 대하여 설명하는 문서입니다."
+description: 'Misskey에 대하여 설명하는 문서입니다.'
 ---
 
 # Misskey에 대하여
@@ -67,6 +67,7 @@ Misskey를 사용하는 유저를 "미스키스트"(Misskist)라고 부릅니다
 친구나 지인을 Misskey에 초대하는 것을 비롯하여 다양한 방법으로 Misskey를 널리 알려 주는 것 또한 개발에 대한 동기 부여로 이어집니다.
 
 ### 기부하기
+
 [이 페이지를 읽어 주세요](./donate.md)
 
 ## 자주 묻는 질문

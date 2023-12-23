@@ -74,10 +74,11 @@ class Emoji {
 Les champs de `Meta` ne sont actuellement pas utilisés ou vérifiés lors d’un import à l’exception de `emojis`.
 
 Pour chaque `Emoji` :
+
 - `downloaded` : doit toujours être `true`, à défaut l’émoticône ne sera pas importée ;
 - `fileName` : nom du fichier au sein de l’archive ;
 - `emoji` : les données associées comme stockées dans la base de données. Généralement les champs ne sont pas vérifiés.
-Seul les suivants sont utilisés :
+  Seul les suivants sont utilisés :
   - `name` : nom de l’émoticône (ex : `blobfox` s’il faut taper `:blobfox:` pour utiliser l’émoticône) ;
     Si une émoticône utilisait ce nom, elle ** sera écrasée** !
   - `category` : catégorie de l’émoticône ;

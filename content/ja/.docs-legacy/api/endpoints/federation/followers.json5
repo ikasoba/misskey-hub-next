@@ -1,9 +1,7 @@
 {
 	summary: 'ローカルユーザーからサーバーに所属するユーザーへのフォローを取得します。',
 	description: 'ローカルユーザーからサーバーに所属するユーザーへのフォローを取得します。',
-	tags: [
-		'federation',
-	],
+	tags: ['federation'],
 	requireCredential: false,
 	req: {
 		type: 'object',
@@ -30,9 +28,7 @@
 				description: '取得するフォローの最大数。',
 			},
 		},
-		required: [
-			'host',
-		],
+		required: ['host'],
 	},
 	res: {
 		type: 'array',

@@ -1,9 +1,7 @@
 {
 	summary: 'ページを作成します。',
 	description: 'ページを作成します。',
-	tags: [
-		'pages',
-	],
+	tags: ['pages'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -50,10 +48,7 @@
 			},
 			font: {
 				type: 'string',
-				enum: [
-					'serif',
-					'sans-serif',
-				],
+				enum: ['serif', 'sans-serif'],
 				default: 'sans-serif',
 				description: 'ページで使用するフォント。',
 			},
@@ -68,13 +63,7 @@
 				description: 'trueにすると、ピン留めされているときにタイトルを非表示にします。',
 			},
 		},
-		required: [
-			'title',
-			'name',
-			'content',
-			'variables',
-			'script',
-		],
+		required: ['title', 'name', 'content', 'variables', 'script'],
 	},
 	res: {
 		type: 'object',

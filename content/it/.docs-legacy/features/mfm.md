@@ -1,5 +1,5 @@
 ---
-description: "MFM è uno speciale linguaggio di marcatura del testo che può essere usato in varie zone di Misskey."
+description: 'MFM è uno speciale linguaggio di marcatura del testo che può essere usato in varie zone di Misskey.'
 ---
 
 # MFM, Misskey Flavoured Markdown

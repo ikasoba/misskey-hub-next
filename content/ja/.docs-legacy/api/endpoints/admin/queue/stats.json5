@@ -1,9 +1,7 @@
 {
 	summary: '',
 	description: '',
-	tags: [
-		'admin',
-	],
+	tags: ['admin'],
 	requireCredential: true,
 	req: {
 		type: 'object',
@@ -40,12 +38,7 @@
 				$ref: 'misskey://QueueCount',
 			},
 		},
-		required: [
-			'deliver',
-			'inbox',
-			'db',
-			'objectStorage',
-		],
+		required: ['deliver', 'inbox', 'db', 'objectStorage'],
 	},
 	errors: {},
 }
